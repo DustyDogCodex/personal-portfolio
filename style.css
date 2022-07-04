@@ -1,0 +1,35 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 45%;
+    width: 120px;
+    border: 1px solid black;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.intro{
+    border: 1px solid black;
+    width: 100vw;
+    height: 100vh;
+}
