@@ -1,8 +1,31 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Chivo Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar and nav-items styling */
+.navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;;
+  border: 1px solid black;
+  width: 200px;
+  height: 100vh;
+}
+
+.name{
+  font-size: 24px;
+  margin: 50px 20px;
+}
+
+.nav-items{
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px 0px;
+  border-bottom: 1px dashed black;
 }
