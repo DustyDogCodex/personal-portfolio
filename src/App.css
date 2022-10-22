@@ -5,10 +5,12 @@
 body{
   margin: 0;
   padding: 0;
+  background: rgb(0,0,0);
 }
 
 /* Navbar and nav-items styling */
 .navbar{
+  background: rgb(65,74,76);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,14 +20,35 @@ body{
   height: 100vh;
 }
 
+.menu{
+  border: 1px solid salmon;
+}
+
 .name{
+  color: aliceblue;
   font-size: 24px;
-  margin: 50px 20px;
+  margin: 20px 20px;
 }
 
 .nav-items{
+  color: aliceblue;
   font-size: 20px;
   margin: 20px;
   padding: 20px 0px;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dashed aliceblue;
+}
+
+/* sliding hamburger menu styling and visibility */
+.hidden {
+  display: none;
+}
+
+/* Styling for the Home section */
+.home{
+  color: aliceblue;
+  padding: 30px;
+}
+
+.big-name{
+  font-size: 60px;
 }
