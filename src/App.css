@@ -25,3 +25,36 @@ body {
 .home h1 {
   font-size: 60px;
 }
+
+/* styling for the navbar element */
+.navbar{
+  width: 100%;
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:  rgb(53,56,57);
+  border: 1px solid salmon;
+}
+
+.nav-items, .nav-name{
+  color: aliceblue;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-items{
+  padding: 10px;
+}
+
+.nav-items:hover{
+  background: rgb(16,12,8);
+}
+
+.nav-right{
+  display: flex;
+  align-items: center;
+}
