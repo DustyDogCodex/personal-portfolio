@@ -14,7 +14,7 @@ body {
   width: 100vw;
   padding: 50px;
   font-size: 24px;
-  background: rgb(16,12,8);
+  background: rgb(1, 1, 1);
   color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,15 @@ body {
   font-size: 60px;
 }
 
+.browse-portfolio {
+  padding:  15px 30px;
+  border-radius: 20px;
+  border: none;
+  background:  rgb(0,183,235);
+  color: aliceblue;
+  font-size: 18px;
+}
+
 /* styling for the navbar element */
 .navbar{
   width: 100%;
@@ -35,8 +44,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:  rgb(53,56,57);
-  border: 1px solid salmon;
+  background:  rgb(12, 12, 20);
 }
 
 .nav-items, .nav-name{
@@ -51,7 +59,7 @@ body {
 }
 
 .nav-items:hover{
-  background: rgb(16,12,8);
+  background: rgb(0,183,235);
 }
 
 .nav-right{

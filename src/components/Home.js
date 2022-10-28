@@ -6,7 +6,7 @@ function Home() {
                 <h1>Varun Malaviya</h1>
                 <span>Full Stack Engineer</span>
                 <p>I specialise in creating modern and stylish websites for customers of all sizes.</p>
-                <button>Browse My Portfolio</button>
+                <button className="browse-portfolio">Browse My Portfolio</button>
             </div>
         </div>
     )
