@@ -66,3 +66,15 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* styling for contact section */
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact a,span {
+  margin: 10px;
+}
