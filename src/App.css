@@ -6,6 +6,8 @@
 body {
   margin: 0;
   padding: 0;
+  background: rgb(1, 1, 1);
+  color: aliceblue;
 }
 
 /* styling for the home component */
@@ -14,8 +16,6 @@ body {
   width: 100vw;
   padding: 50px;
   font-size: 24px;
-  background: rgb(1, 1, 1);
-  color: aliceblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +33,12 @@ body {
   background:  rgb(0,183,235);
   color: aliceblue;
   font-size: 18px;
+}
+
+.browse-portfolio:hover{
+  transform: scale(1.2);
+  color: rgb(130, 224, 170);
+  transition: transform 0.5s, color 0.5s;
 }
 
 /* styling for the navbar element */
@@ -59,12 +65,38 @@ body {
 }
 
 .nav-items:hover{
+  transform: scale(1.2);
+  color: rgb(248, 196, 113);
   background: rgb(0,183,235);
+  transition: transform 0.5s, color 0.5s;
 }
 
 .nav-right{
   display: flex;
   align-items: center;
+}
+
+/* styling for the about-me section */
+.about-me{
+  padding: 50px;
+  font-size: 18px;
+}
+
+.heading{
+  width: 250px;
+  color: rgb(248, 196, 113);
+  border-bottom: 1px dashed rgb(248, 196, 113);
+}
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  line-height: 0.1;
+}
+
+/* styling for portfolio section */
+.portfolio {
+  padding: 50px;
 }
 
 /* styling for contact section */
@@ -77,4 +109,18 @@ body {
 
 .contact a,span {
   margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(12, 12, 20);
+  color: grey;
 }

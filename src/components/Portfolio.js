@@ -1,14 +1,14 @@
 function Portfolio() {
     return (
-        <div className="Portfolio">
+        <div className="portfolio">
             <div className="main-showcase">
-                My most recent projects include:
+                <h2 className="heading">Portfolio</h2>
                 <li>Meme Generator</li>
                 <li>Tenzies Game</li>
                 <li>Airbnb Clone</li>
             </div>
             <div className="honorable-mentions">
-                My honorable mentions include:
+                <h3 className="heading">Honorable Mentions</h3>
                 <li>Restaurant Page</li>
                 <li>MMA website</li>
                 <li>Hair salon</li>

@@ -1,6 +1,6 @@
 function Navbar() {
 
-    const navItems = ['Home', 'About','Portfolio', 'Contact', 'Socials']
+    const navItems = ['Home', 'About','Portfolio', 'Contact']
 
     const navElements = navItems.map((item,index) => {
         return (<div key={index} className="nav-items">{item}</div>)
