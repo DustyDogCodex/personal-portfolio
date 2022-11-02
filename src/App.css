@@ -99,6 +99,20 @@ body {
   padding: 50px;
 }
 
+.project{
+  display: flex;
+}
+
+.summary-top {
+  background: rgb(12, 12, 20);
+  padding: 20px;
+}
+
+.asset{
+  display: flex;
+  color: grey;
+}
+
 /* styling for contact section */
 .contact{
   display: flex;
