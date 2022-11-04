@@ -1,11 +1,13 @@
 /* styling for div containing displayed projects in the portfolio section. Honorable mentions are in a separate component */
-function Project({ name, description, assets }) {
+function Project({ name, description, assets, screenshot }) {
 
     const assetElements = assets.map(asset => {
         return (
             <span>{asset}</span>
         )
     })
+
+    console.log(screenshot)
 
     return (
         <div className="project">
@@ -22,7 +24,7 @@ function Project({ name, description, assets }) {
             </div>
             
             <div className="image">
-                img element containing a screenshot. Will have a filter that will be removed once user hovers on the image!
+                <img src={screenshot} alt="screenshot of project" />
             </div>
         </div>
     )

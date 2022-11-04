@@ -8,27 +8,27 @@ function Portfolio() {
         description: 'A recreation of the popular game Tenzies, where the first player to roll the same 10 digits with 10 different die wins.',
         assets: ['ReactJS', 'CSS', 'HTML'],
         links: {github: '#', live: '#'},
-        screenshot: 'image url goes here!'
+        screenshot: './Images/tenzies.png'
         },
         {
         name: 'Meme Maker 9000', 
         description: 'A simple web app that allows users to select an image from a collection of the 100 most popular memes from the imgflip API and put text over the images.',
         assets: ['ReactJS', 'CSS', 'imgflip API'],
         links: {github: '#', live: '#'},
-        screenshot: 'image url goes here!'
+        screenshot: './Images/meme-maker-9000.png'
         },
         {
         name: 'Brise Weather App', 
         description: 'A web app that finds a user\'s current location and display a 24hr, a 7 day and an hourly weather forecast for that location.',
         assets: ['JavaScript', 'CSS', 'OpenMeteo API'],
         links: {github: '#', live: '#'},
-        screenshot: 'image url goes here!'
+        screenshot: './Images/brise.png'
         }
     ]
 
     const projectElements = projectList.map((proj,index) => {
         return (
-            <Project key={index} name={proj.name} description={proj.description} assets={proj.assets}/>
+            <Project key={index} name={proj.name} description={proj.description} assets={proj.assets} screenshot={proj.screenshot}/>
         )
     })
 
