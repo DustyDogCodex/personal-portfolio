@@ -101,6 +101,10 @@ body {
 
 .project{
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
 }
 
 .summary-top {
@@ -111,6 +115,17 @@ body {
 .asset{
   display: flex;
   color: grey;
+}
+
+.image img{
+  filter: grayscale(100%) sepia(100%) hue-rotate(90deg);
+  width: 500px;
+  height: 400px;
+}
+
+.image img:hover{
+  filter: none;
+  transition: filter 1.5s;
 }
 
 /* styling for contact section */

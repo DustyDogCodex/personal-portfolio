@@ -1,9 +1,55 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faJs } from "@fortawesome/free-brands-svg-icons"
+import { faReact } from "@fortawesome/free-brands-svg-icons"
+import { faCss3 } from "@fortawesome/free-brands-svg-icons"
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons"
+import { faNodeJs } from "@fortawesome/free-brands-svg-icons"
+import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons"
+
 function About() {
 
-    const skillSet = ['JavaScript', 'ReactJS', 'CSS', 'HTML', 'NodeJs', 'Express', 'MongoDB', 'Heroku']
+    /* array of skills and respective icons from Font Awesome Library */
+    /* FOnt awesome doesn't have icons for Heroku, Mongodb and Express so I just used the closest icons that represent them lol */
+    const skillSet = [
+        { 
+            lang: 'JavaScript',
+            icon: faJs
+        },
+        { 
+            lang: 'ReactJs',
+            icon: faReact
+        },
+        { 
+            lang: 'CSS',
+            icon: faCss3
+        },
+        { 
+            lang: 'HTML',
+            icon: faHtml5
+        },
+        { 
+            lang: 'NodeJs',
+            icon: faNodeJs
+        },
+        { 
+            lang: 'Express',
+            icon: faNodeJs
+        },
+        { 
+            lang: 'MongoDb',
+            icon: faCloudArrowUp
+        },
+        { 
+            lang: 'Heroku',
+            icon: faCloudArrowUp
+        },
+    ]
 
+    /* mapping skills into an array of p elements containing a programming lang and its respective icon from font awesome library. */
     const skillIcons = skillSet.map((skill,index) => {
-        return (<p key={index}>{skill}</p>)
+        return (<p key={index}>
+            <FontAwesomeIcon icon={skill.icon} style={{color: "#f2df07",}}/> {skill.lang}
+            </p>)
     })
 
     return (
