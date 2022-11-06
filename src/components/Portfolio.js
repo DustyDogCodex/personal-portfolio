@@ -1,11 +1,13 @@
 import Project from "./Project"
+import SmallProject from "./SmallerProject"
 
 function Portfolio() {
 
+    //an array containing a list of featured projects to be displayed (stored as objects)
     const projectList = [
         {
         name: 'Tenzies', 
-        description: 'A recreation of the popular game Tenzies, where the first player to roll the same 10 digits with 10 different die wins.',
+        description: 'A recreation of the popular game Tenzies, where the first player to roll the same 10 digits with 10 different dice wins.',
         assets: ['ReactJS', 'CSS', 'HTML'],
         links: {github: '#', live: '#'},
         screenshot: './Images/tenzies.png'
@@ -19,7 +21,7 @@ function Portfolio() {
         },
         {
         name: 'Brise Weather App', 
-        description: 'A web app that finds a user\'s current location and display a 24hr, a 7 day and an hourly weather forecast for that location.',
+        description: 'A web app that uses your current location to display an hourly, a 24hr, and a 7 day weather forecast for that location.',
         assets: ['JavaScript', 'CSS', 'OpenMeteo API'],
         links: {github: '#', live: '#'},
         screenshot: './Images/brise.png'
@@ -31,6 +33,9 @@ function Portfolio() {
             <Project key={index} name={proj.name} description={proj.description} assets={proj.assets} screenshot={proj.screenshot}/>
         )
     })
+
+    /* an array containing smaller projects to be displayed in the honorable mentions section. */
+
 
     return (
         <div className="portfolio">
