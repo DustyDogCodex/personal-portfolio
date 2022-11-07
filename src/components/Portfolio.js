@@ -35,7 +35,27 @@ function Portfolio() {
     })
 
     /* an array containing smaller projects to be displayed in the honorable mentions section. */
+    const honorableMentionsList = [
+        {
+            name: 'AirBnB Clone',
+            description: 'A simple clone of the Airbnb frontend, built using ReactJS',
+            assets: ['ReactJs', 'CSS', 'HTML']
+        },
+        {
+            name: 'Odin Landing Page',
+            description: 'A landing page for a fictional website, created using CSS and HTML.',
+            assets: ['CSS', 'HTML']
+        },
+        {
+            name: 'Admin Dashboard',
+            description: 'Recreating the frontend dashboard for a fictional app using CSS grid',
+            assets: ['CSS', 'HTML']
+        }
+    ]
 
+    const honorableMentionsElements = honorableMentionsList.map((el,index) => {
+        return(<SmallProject key={index} name={el.name} description={el.description} assets={el.assets}/>)
+    })
 
     return (
         <div className="portfolio">
@@ -45,9 +65,7 @@ function Portfolio() {
             </div>
             <div className="honorable-mentions">
                 <h3 className="heading">Honorable Mentions</h3>
-                <li>Restaurant Page</li>
-                <li>MMA website</li>
-                <li>Hair salon</li>
+                {honorableMentionsElements}
             </div>
         </div>
     )
