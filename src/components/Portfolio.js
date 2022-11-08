@@ -63,9 +63,11 @@ function Portfolio() {
                 <h2 className="heading">Portfolio</h2>
                 {projectElements}
             </div>
-            <div className="honorable-mentions">
+            <div>
                 <h3 className="heading">Honorable Mentions</h3>
-                {honorableMentionsElements}
+                <div className="honorable-mentions">
+                    {honorableMentionsElements}
+                </div>
             </div>
         </div>
     )

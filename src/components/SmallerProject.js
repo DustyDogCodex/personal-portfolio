@@ -5,15 +5,15 @@ function SmallProject({ name, description, assets }) {
     /* mapping the assets into individual divs to be displayed */
     const assetElements = assets.map((el,index) => {
         return(
-            <div key={index}>{el}</div>
+            <span key={index}>{el} </span>
         )
     })
 
     return (
-        <div className="smaller-project">
-            <h4>{name}</h4>
+        <div className="small-project">
+            <h3>{name}</h3>
             <p>{description}</p>
-            {assetElements}
+            <div className="asset">{assetElements}</div>
         </div>
     )
 }
