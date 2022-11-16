@@ -172,3 +172,13 @@ footer{
   background: rgb(12, 12, 20);
   color: grey;
 }
+
+/* media query for really big screens */
+@media (min-width: 1400px) {
+  .about-me,
+  .portfolio,
+  .contact {
+    padding: 3% 25%;
+  }
+  
+}
