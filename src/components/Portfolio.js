@@ -60,12 +60,12 @@ function Portfolio() {
     return (
         <div className="portfolio">
             <div className="main-showcase">
-                <h2 className="heading">Portfolio</h2>
+                <h2 className="heading">Recent Projects</h2>
                 {projectElements}
             </div>
-            <div>
-                <h3 className="heading">Honorable Mentions</h3>
-                <div className="honorable-mentions">
+            <div className="honorable-mentions">
+                <h3 className="sub-heading">Honorable Mentions</h3>
+                <div className="small-project-display">
                     {honorableMentionsElements}
                 </div>
             </div>

@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(1, 1, 1);
+  background: #000000;
   color: aliceblue;
 }
 
@@ -44,13 +44,10 @@ body {
 /* styling for the navbar element */
 .navbar{
   width: 100%;
-  position: sticky;
-  left: 0;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:  rgb(12, 12, 20);
+  background:  #000000;
 }
 
 .nav-items, .nav-name{
@@ -79,14 +76,33 @@ body {
 /* styling for the about-me section */
 .about-me{
   padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me p{
   font-size: 18px;
 }
 
+.about-me-right {
+  margin-left: 50px;
+  padding: 100px;
+  height: 400px;
+  width: 400px;
+  background: #5cdb94;
+}
+
 .heading{
-  width: 250px;
-  text-align: center;
-  color: rgb(103, 255, 253);
-  border-bottom: 1px solid rgb(103, 255, 253);
+  font-size: 36px;
+  line-height: 2;
+  color: #6bffb6;
+  border-bottom: 1px dashed white;
+}
+
+.sub-heading {
+  font-size: 20px;
+  color: #6bffb6;
 }
 
 .skills{
@@ -100,22 +116,45 @@ body {
   padding: 50px;
 }
 
+.main-showcase{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .project{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
-  margin: 20px;
+  margin: 50px;
+}
+
+.project-title {
+  color: #fc4444;
+}
+
+.summary{
+  margin: 30px;
 }
 
 .summary-top {
-  background: #5ab9ea;
+  background: #5cdb94;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .asset{
   display: flex;
   color: grey;
+}
+
+.links {
+  display: flex;
+  width: 50px;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .image img{
@@ -130,6 +169,13 @@ body {
 }
 
 .honorable-mentions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-project-display {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
 }
@@ -140,7 +186,7 @@ body {
   padding: 10px;
   margin: 10px;
   border-radius: 20px;
-  background: rgb(62, 0, 250);
+  background: #1a0061;
 }
 
 /* styling for contact section */
@@ -149,6 +195,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  text-align: center;
+  padding: 50px;
 }
 
 .contact a,span {
@@ -180,5 +228,4 @@ footer{
   .contact {
     padding: 3% 25%;
   }
-  
 }
