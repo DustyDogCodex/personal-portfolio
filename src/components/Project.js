@@ -4,7 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
 
 
-function Project({ name, description, assets, screenshot }) {
+function Project({ name, description, assets, screenshot, links }) {
 
     const assetElements = assets.map(asset => {
         return (
@@ -26,13 +26,13 @@ function Project({ name, description, assets, screenshot }) {
                     <div className="asset">
                         {assetElements}
                     </div>
+                    
                     <div className="links">
-                        <FontAwesomeIcon icon={faGithub} style={{color: "grey", height:'20px'}}/>
-                        <FontAwesomeIcon icon={faExternalLink} style={{color: "grey", height:'20px'}}/>
+                        <a href={links.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} style={{color: "grey", height:'20px'}}/></a>
+                        <a href={links.live} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLink} style={{color: "grey", height:'20px'}}/></a>
                     </div>
                 </div>
             </div>
-            
             <div className="image">
                 <img src={screenshot} alt="screenshot of project" />
             </div>
