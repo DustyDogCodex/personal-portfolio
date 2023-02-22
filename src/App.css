@@ -185,8 +185,14 @@ body {
   height: 250px;
   padding: 10px;
   margin: 10px;
-  border-radius: 20px;
-  background: #0c002d;
+  border-radius: 30px;
+  background: #160053;
+}
+
+.small-project:hover {
+  border-radius: 0;
+  transform: scale(1.15);
+  transition: transform 1s;
 }
 
 /* styling for contact section */

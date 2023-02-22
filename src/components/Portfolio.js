@@ -39,22 +39,25 @@ function Portfolio() {
         {
             name: 'AirBnB Clone',
             description: 'A simple clone of the Airbnb frontend, built using ReactJS',
-            assets: ['ReactJs', 'CSS', 'HTML']
+            assets: ['ReactJs', 'CSS', 'HTML'],
+            links: {github: 'https://github.com/DustyDogCodex/AirBnB-Clone', live: 'https://dustydogcodex.github.io/AirBnB-Clone/'}
         },
         {
             name: 'Odin Landing Page',
             description: 'A landing page for a fictional website, created using CSS and HTML.',
-            assets: ['CSS', 'HTML']
+            assets: ['CSS', 'HTML'],
+            links: {github: 'https://github.com/DustyDogCodex/Odin_LandingPage', live: 'https://dustydogcodex.github.io/Odin_LandingPage/'}
         },
         {
             name: 'Admin Dashboard',
             description: 'Recreating the frontend dashboard for a fictional app using CSS grid',
-            assets: ['CSS', 'HTML']
+            assets: ['CSS', 'HTML'],
+            links: {github: 'https://github.com/DustyDogCodex/admin-dashboard', live: 'https://dustydogcodex.github.io/admin-dashboard/'}
         }
     ]
 
     const honorableMentionsElements = honorableMentionsList.map((el,index) => {
-        return(<SmallProject key={index} name={el.name} description={el.description} assets={el.assets}/>)
+        return(<SmallProject key={index} name={el.name} description={el.description} assets={el.assets} links={el.links}/>)
     })
 
     return (
