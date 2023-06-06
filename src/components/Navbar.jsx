@@ -7,7 +7,7 @@ function Navbar() {
     })
 
     return(
-        <div className="navbar">
+        <div className="navbar text-3xl font-bold bg-red-700">
             <div className="nav-name">Varun Malaviya</div>
             <div className="nav-right">
                 {navElements}

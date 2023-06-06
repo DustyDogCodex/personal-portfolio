@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-family: 'Chivo Mono', monospace;
   box-sizing: border-box;
@@ -62,7 +66,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #000000;
+  /* background: #000000; */
 }
 
 .nav-items,
