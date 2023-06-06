@@ -1,252 +1,42 @@
-* {
-  font-family: 'Chivo Mono', monospace;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #000000;
-  color: aliceblue;
-}
-
-/* styling for the home component */
-.home {
-  height: 100vh;
-  width: 100vw;
-  padding: 50px;
-  font-size: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 15%;
-}
-
-.home{
-  animation: fadein 4s;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 100%;
-  }
-}
-
-.home h1 {
-  font-size: 60px;
-}
-
-.browse-portfolio {
-  padding:  15px 30px;
-  border-radius: 20px;
-  border: none;
-  background:  rgb(0,183,235);
-  color: aliceblue;
-  font-size: 18px;
-}
-
-.browse-portfolio:hover{
-  transform: scale(1.2);
-  color: rgb(130, 224, 170);
-  transition: transform 0.5s, color 0.5s;
-}
-
-/* styling for the navbar element */
-.navbar{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background:  #000000;
-}
-
-.nav-items, .nav-name{
-  color: aliceblue;
-  margin: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.nav-items{
-  padding: 10px;
-}
-
-.nav-items:hover{
-  transform: scale(1.2);
-  color: rgb(248, 196, 113);
-  background: rgb(0,183,235);
-  transition: transform 0.5s, color 0.5s;
-}
-
-.nav-right{
-  display: flex;
-  align-items: center;
-}
-
-/* styling for the about-me section */
-.about-me{
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-me p{
-  font-size: 18px;
-}
-
-.about-me-right {
-  margin-left: 50px;
-  padding: 100px;
-  height: 400px;
-  width: 400px;
-  background: #5cdb94;
-}
-
-.heading{
-  font-size: 36px;
-  line-height: 2;
-  color: #6bffb6;
-  border-bottom: 1px dashed white;
-}
-
-.sub-heading {
-  font-size: 20px;
-  color: #6bffb6;
-}
-
-.skills{
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  line-height: 0.1;
-}
-
-/* styling for portfolio section */
-.portfolio {
-  padding: 50px;
-}
-
-.main-showcase{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.project{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 50px;
-}
-
-.project-title {
-  color: #fc4444;
-}
-
-.summary{
-  margin: 30px;
-}
-
-.summary-top {
-  background: #5cdb94;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.asset{
-  display: flex;
-  color: grey;
-}
-
-.links {
-  display: flex;
-  width: 50px;
-  margin: 10px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.image img{
-  filter: grayscale(100%) sepia(100%) hue-rotate(90deg);
-  width: 500px;
-  height: 350px;
-}
-
-.image img:hover{
-  filter: none;
-  transition: filter 0.5s;
-}
-
-.honorable-mentions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.small-project-display {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-}
-
-.small-project {
-  width: 250px;
-  height: 250px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 30px;
-  background: #160053;
-}
-
-.small-project:hover {
-  border-radius: 0;
-  transform: scale(1.15);
-  transition: transform 1s;
-}
-
-/* styling for contact section */
-.contact{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  padding: 50px;
 }
 
-.contact a,span {
-  margin: 10px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover{
-  text-decoration: underline;
-}
-
-footer{
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(12, 12, 20);
-  color: grey;
-}
-
-/* media query for really big screens */
-@media (min-width: 1400px) {
-  .about-me,
-  .portfolio,
-  .contact {
-    padding: 3% 25%;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
