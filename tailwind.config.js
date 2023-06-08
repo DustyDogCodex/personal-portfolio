@@ -4,8 +4,38 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  mode: 'jit',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: "#2CBCE9",
+        red: "#DC4492",
+        yellow: "#FDCC49",
+        gray: "#ededed",
+        "deep-blue": "#010026",
+        "dark-grey": "rgba(0,0,0,0.35"
+      },
+      backgroundImage: (theme) => ({
+        "gradient-rainbow": "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%",
+        "gradient-rainblue": "linear-gradient(90deg, #24cbff 14.53%, #fc59ff 69.36%, #FFBD0c 117.73%" 
+      }),
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        robotoMono: ["Roboto Mono", "monospace"],
+        permanentMarker: ["Permanent Marker", "cursive"]
+      },
+      content: {
+        brush: "url('./assets/brush.png')",
+        person1: "url('./assets/person-1.png')",
+        person2: "url('./assets/person-2.png')",
+        person3: "url('./assets/person-3.png')",
+      }
+    },
+    screens: {
+      xs: "480px",
+      sm: "780px",
+      md: "1060px"
+    }
   },
   plugins: [],
 }
