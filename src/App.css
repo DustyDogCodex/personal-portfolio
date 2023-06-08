@@ -11,13 +11,6 @@ body,
   @apply text-white;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #000000;
-  color: aliceblue;
-}
-
 /* styling for the home component */
 .home {
   height: 100vh;
@@ -62,39 +55,6 @@ body {
   transform: scale(1.2);
   color: rgb(130, 224, 170);
   transition: transform 0.5s, color 0.5s;
-}
-
-/* styling for the navbar element */
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background: #000000; */
-}
-
-.nav-items,
-.nav-name {
-  color: aliceblue;
-  margin: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.nav-items {
-  padding: 10px;
-}
-
-.nav-items:hover {
-  transform: scale(1.2);
-  color: rgb(248, 196, 113);
-  background: rgb(0, 183, 235);
-  transition: transform 0.5s, color 0.5s;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
 }
 
 /* styling for the about-me section */

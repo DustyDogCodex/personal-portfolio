@@ -13,7 +13,8 @@ export default {
         yellow: "#FDCC49",
         gray: "#ededed",
         "deep-blue": "#010026",
-        "dark-grey": "rgba(0,0,0,0.35"
+        "dark-grey": "#757575",
+        "opaque-black": "rgba(0,0,0,0.35)"
       },
       backgroundImage: (theme) => ({
         "gradient-rainbow": "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%",
@@ -34,7 +35,9 @@ export default {
     screens: {
       xs: "480px",
       sm: "780px",
-      md: "1060px"
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px"
     }
   },
   plugins: [],

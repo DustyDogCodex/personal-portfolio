@@ -19,7 +19,7 @@ const Link = ({ page, currentPage, setCurrentPage }) => {
     )
 }
 
-function Navbar({ currentPage, setCurrentPage }) {
+function Navbar({ topOfPage, currentPage, setCurrentPage }) {
     
     //using state to toggle navbar menu
     const [ menuToggled, setMenuToggled ] = useState(false)
@@ -27,8 +27,11 @@ function Navbar({ currentPage, setCurrentPage }) {
     //checking for small screens with custom hooks
     const aboveSmallScreens = useMediaQuery("(min-width: 768px)")
 
+    //setting the navbar background to a different color if it is not on the top of the page
+    const navBg = topOfPage ? "" : "bg-red-400"
+
     return(
-        <nav className={`z-40 w-full fixed top-0 py-5`}>
+        <nav className={`z-40 w-full fixed top-0 py-5 ${navBg}`}>
             <div className="flex items-center justify-between m-auto w-5/6">
                 <h3 className="font-permanentMarker text-5xl font-bold">VM</h3>
 
