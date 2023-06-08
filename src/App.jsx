@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+import  { About } from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+import { Navbar } from './components/Navbar';
 import Portfolio from './components/Portfolio';
 import useMediaQuery from './hooks/useMediaQuery'
 
@@ -19,13 +19,13 @@ function App() {
   return (
     <div className="App bg-deep-blue">
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-      <Home />
-      <About />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <Home/>
+      <About/>
+      <Portfolio/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
 
-export default App;
+export { App }

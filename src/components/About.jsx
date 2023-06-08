@@ -10,6 +10,7 @@ function About() {
 
     /* array of skills and respective icons from Font Awesome Library */
     /* FOnt awesome doesn't have icons for Heroku, Mongodb and Express so I just used the closest icons that represent them lol */
+    
     const skillSet = [
         { 
             lang: 'JavaScript',
@@ -71,4 +72,4 @@ function About() {
     )
 }
 
-export default About
+export { About }
