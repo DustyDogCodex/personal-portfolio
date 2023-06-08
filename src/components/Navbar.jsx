@@ -1,13 +1,18 @@
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import useMediaQuery from "../hooks/useMediaQuery"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 
 const Link = ({ page, currentPage, setCurrentPage }) => {
+    //page names will be capitalised for display. This will convert them to lowercase so I can accurately compare them for our conditional rendering. 
+    const lowerCasePage = page.toLowerCase()
+
     return(
         <AnchorLink 
-            className={`${currentPage === page ? "text-yellow" : ""} hover:text-yellow transition duration-500`} 
-            href={`#${page}`}
-            onClick={() => setCurrentPage(page)}
+            className={`${currentPage === lowerCasePage ? "text-yellow" : ""} hover:text-yellow transition duration-500`} 
+            href={`#${lowerCasePage}`}
+            onClick={() => setCurrentPage(lowerCasePage)}
         >
             {page}
         </AnchorLink>
@@ -31,15 +36,59 @@ function Navbar({ currentPage, setCurrentPage }) {
                 {aboveSmallScreens ? (
                     <div className="flex justify-between gap-16 font-roboto text-sm font-semibold">
                         <Link
-                            page="home"
+                            page="Home"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        ></Link>
+                        <Link
+                            page="Skills"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        ></Link>
+                        <Link
+                            page="Projects"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        ></Link>
+                        <Link
+                            page="Testimonials"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        ></Link>
+                        <Link
+                            page="Contact"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         ></Link>
                     </div>
-                ) : (<div></div>)}
+                ) : (
+                <button
+                    className="rounded-full bg-red p-2 flex items-center justify-center"
+                    onClick={() => setMenuToggled(true)}
+                >
+                    <FontAwesomeIcon 
+                        icon={faBars} 
+                        style={{color: "#f5c211", height:'30px', width:'30px'}} 
+                    />
+                </button>)}
+
+                {/* when user toggles menu for small/mobile screens */}
+                {!aboveSmallScreens && menuToggled && (
+                    <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                        <div className="flex justify-end p-10">
+                            <button onClick={() => setMenuToggled(!menuToggled)}>
+                                <FontAwesomeIcon 
+                                    icon={faX} 
+                                    style={{color: "#f5c211", height:'30px', width:'30px'}} 
+                                />
+                            </button>
+                        </div>
+                        <div className="flex flex-col"></div>
+                    </div>
+                )}
             </div>
         </nav>
     )
 }
 
-export default Navbar
+export { Navbar }
