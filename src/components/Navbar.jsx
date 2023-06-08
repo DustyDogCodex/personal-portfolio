@@ -2,7 +2,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import useMediaQuery from "../hooks/useMediaQuery"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Link = ({ page, currentPage, setCurrentPage }) => {
     //page names will be capitalised for display. This will convert them to lowercase so I can accurately compare them for our conditional rendering. 
@@ -19,13 +19,25 @@ const Link = ({ page, currentPage, setCurrentPage }) => {
     )
 }
 
-function Navbar({ topOfPage, currentPage, setCurrentPage }) {
+function Navbar({ currentPage, setCurrentPage }) {
     
     //using state to toggle navbar menu
     const [ menuToggled, setMenuToggled ] = useState(false)
 
     //checking for small screens with custom hooks
     const aboveSmallScreens = useMediaQuery("(min-width: 768px)")
+
+    //determining if navbar is at top of page or not.
+    const [topOfPage, setTopOfPage] = useState(true)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if(window.scrollY === 0) setTopOfPage(true) 
+            if(window.scrollY !== 0) setTopOfPage(false)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     //setting the navbar background to a different color if it is not on the top of the page
     const navBg = topOfPage ? "" : "bg-red-400"
