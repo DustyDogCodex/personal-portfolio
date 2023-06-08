@@ -32,18 +32,17 @@ function Navbar({ currentPage, setCurrentPage }) {
 
     useEffect(() => {
         const handleScroll = () => {
-            if(window.scrollY === 0) setTopOfPage(true) 
-            if(window.scrollY !== 0) setTopOfPage(false)
+            window.scrollY === 0 ? setTopOfPage(true) : setTopOfPage(false)
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     //setting the navbar background to a different color if it is not on the top of the page
-    const navBg = topOfPage ? "" : "bg-red-400"
+    const navBg = topOfPage ? "" : "bg-red"
 
     return(
-        <nav className={`z-40 w-full fixed top-0 py-5 ${navBg}`}>
+        <nav className={`${navBg} z-40 w-full fixed top-0 py-5`}>
             <div className="flex items-center justify-between m-auto w-5/6">
                 <h3 className="font-permanentMarker text-5xl font-bold">VM</h3>
 

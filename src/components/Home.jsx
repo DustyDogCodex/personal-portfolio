@@ -19,7 +19,7 @@ function Home({ setCurrentPage }) {
                         className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]"    
                     >
                         <img 
-                            src="./Images/profile.png" 
+                            src="src/assets/profile.png" 
                             alt="varun's headshot"
                             className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]" 
                         />
@@ -27,7 +27,7 @@ function Home({ setCurrentPage }) {
                 ) : (
                     /* for screens below medium screen size, there will be no border, only the image */
                     <img 
-                        src="./Images/profile.png" 
+                        src="src/assets/profile.png" 
                         alt="varun's headshot"
                         className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]" 
                     />
@@ -35,8 +35,21 @@ function Home({ setCurrentPage }) {
             </div>
             
             {/* MAIN CONTENT/TEXT */}
-            <div>
-                
+            <div className="z-30 basis-2/5 mt-12 md:mt-32">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -50 },
+                        visible: { opacity: 1, x: 0}
+                    }}
+                >
+                    <p className="text-6xl font-robotoMono z-10 text-center md:text-start">
+                        Varun <span className="ml-1 xs:relative xs:font-semibold z-20 xs:before:content-brush ">Malaviya</span>
+                    </p>
+                </motion.div>
             </div>
         </section>
     )
