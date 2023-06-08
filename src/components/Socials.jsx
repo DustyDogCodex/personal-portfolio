@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 function Socials(){
     return(
         <div
-            className="flex justify-center md:justify-start my-10 gap-7" 
+            className="mx-5 flex justify-center md:justify-start my-10 gap-7" 
         >
             <a 
                 href="https://twitter.com/VarunMalaviya2"

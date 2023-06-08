@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import  { About } from './components/About';
+import  { Skills } from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Home } from './components/Home';
@@ -33,7 +33,7 @@ function App() {
         }
       </div>
       <Home setCurrentPage={setCurrentPage}/>
-      <About/>
+      <Skills/>
       <Portfolio/>
       <Contact/>
       <Footer/>
