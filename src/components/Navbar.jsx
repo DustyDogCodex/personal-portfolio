@@ -10,7 +10,7 @@ const Link = ({ page, currentPage, setCurrentPage }) => {
 
     return(
         <AnchorLink 
-            className={`${currentPage === lowerCasePage ? "text-yellow" : ""} hover:text-yellow transition duration-500`} 
+            className={`${currentPage === lowerCasePage ? "text-yellow" : ""} hover:text-yellow transition duration-500 hover:no-underline`} 
             href={`#${lowerCasePage}`}
             onClick={() => setCurrentPage(lowerCasePage)}
         >
@@ -39,27 +39,27 @@ function Navbar({ currentPage, setCurrentPage }) {
                             page="Home"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
-                        ></Link>
+                        />
                         <Link
                             page="Skills"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
-                        ></Link>
+                        />
                         <Link
                             page="Projects"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
-                        ></Link>
+                        />
                         <Link
                             page="Testimonials"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
-                        ></Link>
+                        />
                         <Link
                             page="Contact"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
-                        ></Link>
+                        />
                     </div>
                 ) : (
                 <button
@@ -83,7 +83,33 @@ function Navbar({ currentPage, setCurrentPage }) {
                                 />
                             </button>
                         </div>
-                        <div className="flex flex-col"></div>
+                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                            <Link
+                            page="Home"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                        <Link
+                            page="Skills"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                        <Link
+                            page="Projects"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                        <Link
+                            page="Testimonials"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                        <Link
+                            page="Contact"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                        </div>
                     </div>
                 )}
             </div>
