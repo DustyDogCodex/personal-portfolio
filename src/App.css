@@ -11,44 +11,6 @@ body,
   @apply text-white;
 }
 
-/* styling for the about-me section */
-.about-me {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-me p {
-  font-size: 18px;
-}
-
-.about-me-right {
-  margin-left: 50px;
-  padding: 100px;
-  height: 400px;
-  width: 400px;
-  background: #5cdb94;
-}
-
-.heading {
-  font-size: 36px;
-  line-height: 2;
-  color: #6bffb6;
-  border-bottom: 1px dashed white;
-}
-
-.sub-heading {
-  font-size: 20px;
-  color: #6bffb6;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  line-height: 0.1;
-}
-
 /* styling for portfolio section */
 .portfolio {
   padding: 50px;
