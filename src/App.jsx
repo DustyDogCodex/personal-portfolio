@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
-import { useMediaQuery } from './hooks/useMediaQuery'
+import useMediaQuery from './hooks/useMediaQuery'
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App bg-deep-blue">
-      <Navbar />
+      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       <Home />
       <About />
       <Portfolio />
