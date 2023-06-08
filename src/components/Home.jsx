@@ -1,6 +1,7 @@
 import useMediaQuery from "../hooks/useMediaQuery"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { motion } from "framer-motion"
+import { Socials } from "./Socials"
 
 function Home({ setCurrentPage }) {
     //using custom hook to determine if screen size is above or below 1060px
@@ -47,10 +48,44 @@ function Home({ setCurrentPage }) {
                     }}
                 >
                     <p className="text-6xl font-robotoMono z-10 text-center md:text-start">
-                        Varun <span className="ml-1 xs:relative xs:font-semibold z-20 xs:before:content-brush ">Malaviya</span>
+                        Varun <span className="ml-1 xs:relative xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[-25px] before:-top-[70px] before:z-[-1]">Malaviya</span>
+                    </p>
+                    <p className="my-10 text-center md:text-start">
+                        Creating Innovative Solutions, One Line of Code at a Time
                     </p>
                 </motion.div>
             </div>
+
+            <div>
+                <motion.div
+                    className="flex mt-5 justify-center md:justify-start"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay:0.2, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -50 },
+                        visible: { opacity: 1, x: 0}
+                    }}
+                >
+                    <AnchorLink
+                        className="bg-gradient-rainblue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+                        onClick={() => setCurrentPage('projects')}
+                        href="#projects"
+                    >
+                        Browse my Portfolio
+                    </AnchorLink>
+                    <AnchorLink
+                        className="bg-gradient-rainbow rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+                        onClick={() => setCurrentPage('contact')}
+                        href="#contact"
+                    >
+                        Let's talk
+                    </AnchorLink>
+                </motion.div>
+            </div>
+
+            <Socials/>
         </section>
     )
 }

@@ -24,7 +24,7 @@ function App() {
         setCurrentPage={setCurrentPage}
       />
       {/* sidebar navigation dots */}
-      <div className="w-5/6 mx-auto md:h-full">
+      <div>
         {aboveMediumScreens && (
           <SidebarNavDots 
             currentPage={currentPage}
