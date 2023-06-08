@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: 'Chivo Mono', monospace;
-  box-sizing: border-box;
+html,
+body,
+#root,
+.App{
+  height: 100%;
+  background: #010026;
+  @apply text-white;
 }
 
 body {
