@@ -1,5 +1,6 @@
 import Project from "./Project"
 import SmallProject from "./SmallerProject"
+import { motion } from "framer-motion"
 
 function Portfolio() {
 
@@ -61,7 +62,9 @@ function Portfolio() {
     })
 
     return (
-        <div className="portfolio">
+        <section
+            id="portfolio" 
+            className="p-20">
             <div className="main-showcase">
                 <h2 className="heading">Recent Projects</h2>
                 {projectElements}
@@ -72,8 +75,8 @@ function Portfolio() {
                     {honorableMentionsElements}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
-export default Portfolio
+export { Portfolio }
