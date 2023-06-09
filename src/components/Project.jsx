@@ -1,43 +1,40 @@
 /* styling for div containing displayed projects in the portfolio section. Honorable mentions are in a separate component */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
+function Project({ title }) {
 
+    //lowercasing project titles
+    const projectTitle = title.split(" ").join("-").toLowerCase()
 
-function Project({ name, description, assets, screenshot, links }) {
+    //this controls the animations for each individual project
+    const projectAnimation = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1 }
+    }
 
-    const assetElements = assets.map(asset => {
-        return (
-            <span>{asset}</span>
-        )
-    })
-
-    console.log(screenshot)
+    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`
 
     return (
-        <div className="project">
-
-            <div className="summary">
-                <h2 className="project-title"><em>{name}</em></h2>
-                <div className="summary-top">
-                    <p>{description}</p>
-                </div>
-                <div className="summary-bottom">
-                    <div className="asset">
-                        {assetElements}
-                    </div>
-                    
-                    <div className="links">
-                        <a href={links.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} style={{color: "grey", height:'20px'}}/></a>
-                        <a href={links.live} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLink} style={{color: "grey", height:'20px'}}/></a>
-                    </div>
-                </div>
+        <motion.div 
+            variants={projectAnimation}
+            className="relative"    
+        >
+            <div
+                className={overlayStyles}
+            >
+                <p 
+                    className="text-2xl font-roboto"
+                >
+                    {title}
+                </p>
+                <p className="mt-7">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum atque, similique ad nam veritatis.
+                </p>
             </div>
-            <div className="image">
-                <img src={screenshot} alt="screenshot of project" />
-            </div>
-        </div>
+            <img 
+                src={`../assets/${projectTitle}.png`}
+                alt={`${projectTitle} screenshot`} 
+            />
+        </motion.div>
     )
 }
 
-export default Project
+export { Project }
