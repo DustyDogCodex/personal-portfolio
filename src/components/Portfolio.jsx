@@ -17,17 +17,29 @@ function Portfolio() {
         {
             title: 'Tenzies', 
             subtitle: 'The first player to roll the same 10 digits with 10 different dice wins!',
-            links: {github: 'https://github.com/DustyDogCodex/Tenzies', live: 'https://dustydogcodex.github.io/Tenzies/'}
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/Tenzies', 
+                live: 'https://dustydogcodex.github.io/Tenzies/'
+            }
         },
         {
             title: 'Meme Maker 9000', 
             subtitle: 'Make memes from the 100 most popular memes on Imgflip',
-            links: {github: 'https://github.com/DustyDogCodex/Meme-Maker-9000', live: 'https://dustydogcodex.github.io/Meme-Maker-9000/'}
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/Meme-Maker-9000', 
+                live: 'https://dustydogcodex.github.io/Meme-Maker-9000/'
+            }
         },
         {
             title: 'Brise', 
             subtitle: 'Weather app that forecasts weather for your current location',
-            links: {github: 'https://github.com/DustyDogCodex/Brise-Weather-App', live: 'https://dustydogcodex.github.io/Brise-Weather-App/'},
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/Brise-Weather-App', 
+                live: 'https://dustydogcodex.github.io/Brise-Weather-App/'
+            }
         }
     ]
 
@@ -44,7 +56,7 @@ function Portfolio() {
 
     return (
         <section
-            id="portfolio" 
+            id="projects" 
             className="p-20"
         >
             <motion.div
