@@ -1,6 +1,5 @@
 import { Project } from "./Project"
 import { RainbowLineBreak } from "./RainbowLineBreak"
-import SmallProject from "./SmallerProject"
 import { motion } from "framer-motion"
 
 function Portfolio() {
@@ -13,61 +12,34 @@ function Portfolio() {
         }
     }
 
-    //an array containing a list of featured projects to be displayed (stored as objects)
+    //an array containing a list of featured projects to be displayed.
     const projectList = [
         {
-        name: 'Tenzies', 
-        description: 'A recreation of the popular game Tenzies, where the first player to roll the same 10 digits with 10 different dice wins.',
-        assets: ['ReactJS', 'CSS', 'HTML'],
-        links: {github: 'https://github.com/DustyDogCodex/Tenzies', live: 'https://dustydogcodex.github.io/Tenzies/'},
-        screenshot: './Images/tenzies.png'
+            title: 'Tenzies', 
+            subtitle: 'The first player to roll the same 10 digits with 10 different dice wins!',
+            links: {github: 'https://github.com/DustyDogCodex/Tenzies', live: 'https://dustydogcodex.github.io/Tenzies/'}
         },
         {
-        name: 'Meme Maker 9000', 
-        description: 'A simple web app that allows users to select an image from a collection of the 100 most popular memes from the imgflip API and put text over the images.',
-        assets: ['ReactJS', 'CSS', 'imgflip API'],
-        links: {github: 'https://github.com/DustyDogCodex/Meme-Maker-9000', live: 'https://dustydogcodex.github.io/Meme-Maker-9000/'},
-        screenshot: './Images/meme-maker-9000.png'
+            title: 'Meme Maker 9000', 
+            subtitle: 'Make memes from the 100 most popular memes on Imgflip',
+            links: {github: 'https://github.com/DustyDogCodex/Meme-Maker-9000', live: 'https://dustydogcodex.github.io/Meme-Maker-9000/'}
         },
         {
-        name: 'Brise Weather App', 
-        description: 'A web app that uses your current location to display an hourly, a 24hr, and a 7 day weather forecast for that location.',
-        assets: ['JavaScript', 'CSS', 'OpenMeteo API'],
-        links: {github: 'https://github.com/DustyDogCodex/Brise-Weather-App', live: 'https://dustydogcodex.github.io/Brise-Weather-App/'},
-        screenshot: './Images/brise.png'
+            title: 'Brise', 
+            subtitle: 'Weather app that forecasts weather for your current location',
+            links: {github: 'https://github.com/DustyDogCodex/Brise-Weather-App', live: 'https://dustydogcodex.github.io/Brise-Weather-App/'},
         }
     ]
 
     const projectElements = projectList.map((proj,index) => {
         return (
-            <Project key={index} name={proj.name} description={proj.description} assets={proj.assets} screenshot={proj.screenshot} links={proj.links}/>
+            <Project 
+                key={index} 
+                title={proj.title} 
+                subtitle={proj.subtitle}  
+                links={proj.links}
+            />
         )
-    })
-
-    /* an array containing smaller projects to be displayed in the honorable mentions section. */
-    const honorableMentionsList = [
-        {
-            name: 'AirBnB Clone',
-            description: 'A simple clone of the Airbnb frontend, built using ReactJS',
-            assets: ['ReactJs', 'CSS', 'HTML'],
-            links: {github: 'https://github.com/DustyDogCodex/AirBnB-Clone', live: 'https://dustydogcodex.github.io/AirBnB-Clone/'}
-        },
-        {
-            name: 'Odin Landing Page',
-            description: 'A landing page for a fictional website, created using CSS and HTML.',
-            assets: ['CSS', 'HTML'],
-            links: {github: 'https://github.com/DustyDogCodex/Odin_LandingPage', live: 'https://dustydogcodex.github.io/Odin_LandingPage/'}
-        },
-        {
-            name: 'Admin Dashboard',
-            description: 'Recreating the frontend dashboard for a fictional app using CSS grid',
-            assets: ['CSS', 'HTML'],
-            links: {github: 'https://github.com/DustyDogCodex/admin-dashboard', live: 'https://dustydogcodex.github.io/admin-dashboard/'}
-        }
-    ]
-
-    const honorableMentionsElements = honorableMentionsList.map((el,index) => {
-        return(<SmallProject key={index} name={el.name} description={el.description} assets={el.assets} links={el.links}/>)
     })
 
     return (
@@ -110,6 +82,7 @@ function Portfolio() {
                     >
                         MODERN STYLISH INTERFACES
                     </div>
+                    {projectElements}
                     <div 
                         className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-roboto font-bold"
                     >

@@ -1,7 +1,9 @@
 /* styling for div containing displayed projects in the portfolio section. Honorable mentions are in a separate component */
-function Project({ title }) {
+import { motion } from "framer-motion"
 
-    //lowercasing project titles
+function Project({ title, subtitle, links }) {
+
+    //lowercasing project titles to reference project screenshots.
     const projectTitle = title.split(" ").join("-").toLowerCase()
 
     //this controls the animations for each individual project
@@ -18,7 +20,7 @@ function Project({ title }) {
             className="relative"    
         >
             <div
-                className={overlayStyles}
+                className="absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 z-30 flex bg-gray flex-col justify-center items-center text-center p-16 text-deep-blue"
             >
                 <p 
                     className="text-2xl font-roboto"
@@ -26,11 +28,11 @@ function Project({ title }) {
                     {title}
                 </p>
                 <p className="mt-7">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum atque, similique ad nam veritatis.
+                    {subtitle}
                 </p>
             </div>
             <img 
-                src={`../assets/${projectTitle}.png`}
+                src={`src/assets/${projectTitle}.png`}
                 alt={`${projectTitle} screenshot`} 
             />
         </motion.div>
