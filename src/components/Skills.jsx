@@ -9,45 +9,8 @@ import { motion } from "framer-motion"
 
 function Skills() {
 
+    //checking for screen size
     const aboveMediumScreens = useMediaQuery("(min-width: 1060px)")
-
-    /* array of skills and respective icons from Font Awesome Library */
-    /* FOnt awesome doesn't have icons for Heroku, Mongodb and Express so I just used the closest icons that represent them lol */
-    
-    const skillSet = [
-        { 
-            lang: 'ReactJs',
-            icon: faReact
-        },
-        { 
-            lang: 'JavaScript',
-            icon: faJs
-        },
-        { 
-            lang: 'TailwindCSS',
-            icon: faCss3
-        },
-        { 
-            lang: 'NodeJs',
-            icon: faNodeJs
-        },
-        { 
-            lang: 'Express',
-            icon: faNodeJs
-        },
-        { 
-            lang: 'MongoDb',
-            icon: faCloudArrowUp
-        },
-        
-    ]
-
-    /* mapping skills into an array of p elements containing a programming lang and its respective icon from font awesome library. */
-    const skillIcons = skillSet.map((skill,index) => {
-        return (<p key={index}>
-            <FontAwesomeIcon icon={skill.icon} style={{color: "#f2df07",}}/> {skill.lang}
-            </p>)
-    })
 
     return (
         <section 
@@ -55,10 +18,10 @@ function Skills() {
             className="p-20"    
         >
             <div 
-                className="flex justify-between gap-16 mt-20"
-            >   
+                className="flex justify-between gap-16 mt-20">               
             <div 
-                className="w-1/2">
+                className="w-1/2"
+            >
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -69,10 +32,14 @@ function Skills() {
                         visible: { opacity: 1, x: 0}
                     }}
                 >
-                    <h2 className="heading">About Me!</h2>
-                    <p className="mt-5">Hi, I'm Varun! I'm a passionate and experienced software engineer with a strong background in developing innovative solutions. I thrive on solving complex problems and creating efficient, scalable, and user-centric solutions. With expertise in ReactJS, Express, MongoDb and Tailwind, I have a solid foundation in full-stack development. My attention to detail, strong analytical mindset, and commitment to delivering high-quality code enable me to exceed client expectations and drive business growth.</p> 
+                    <h2 
+                        className="text-center text-5xl text-emerald-500 font-permanentMarker"
+                    >
+                        Who I Am
+                    </h2>
+                    <p className="mt-5 font-robotoMono text-lg">Hi, I'm Varun! I'm a passionate and experienced software engineer with a strong background in developing innovative solutions. I thrive on solving complex problems and creating efficient, scalable, and user-centric solutions. With expertise in ReactJS, Express, MongoDb and Tailwind, I have a solid foundation in full-stack development. My attention to detail, strong analytical mindset, and commitment to delivering high-quality code enable me to exceed client expectations and drive business growth.</p> 
                     <br/>
-                    <p>I am a proactive learner, always keeping up with the latest industry trends and continuously expanding my knowledge. Collaborative by nature, I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!</p> 
+                    <p className="mt-5 font-robotoMono text-lg">I am a proactive learner, always keeping up with the latest industry trends and continuously expanding my knowledge. Collaborative by nature, I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!</p> 
                 </motion.div>
             </div>
             <div
@@ -88,9 +55,56 @@ function Skills() {
                         visible: { opacity: 1, x: 100}
                     }}
                 >
-                    <h3 className="sub-heading">My skills include:</h3>
-                    <div className="skills">
-                        {skillIcons}
+                    <h3 
+                        className="text-center text-5xl text-emerald-500 font-permanentMarker"
+                    >
+                        My skills include
+                    </h3>
+                    <div className="flex flex-col items-center m-8">
+                        <span className="flex items-center text-2xl m-5">
+                            <FontAwesomeIcon 
+                                icon={faReact} 
+                                style={{color: "skyblue", height:'40px',width:"40px", marginRight:'15px'}}
+                            /> 
+                            ReactJS 
+                        </span>
+                        <span className="flex items-center text-2xl m-5">
+                            <FontAwesomeIcon 
+                                icon={faJs} 
+                                style={{color: "gold", height:'40px',width:"40px", marginRight:'15px'}}
+                            /> 
+                            JavaScript
+                        </span>
+                        <span className="flex items-center text-2xl m-5">
+                            <img
+                                src='src/assets/tailwindcss.svg'
+                                alt="tailwingcss logo" 
+                                style={{ height:'40px',width:"40px", marginRight:'15px'}}
+                            /> 
+                            TailwindCSS
+                        </span>
+                        <span className="flex items-center text-2xl m-5">
+                            <FontAwesomeIcon 
+                                icon={faNodeJs} 
+                                style={{color: "green", height:'40px',width:"40px", marginRight:'15px'}}
+                            />  
+                            NodeJS
+                        </span>
+                        <span className="flex items-center text-2xl m-5">
+                            <FontAwesomeIcon 
+                                icon={faNodeJs} 
+                                style={{color: "white", height:'40px',width:"40px", marginRight:'15px'}}
+                            />   
+                            Express
+                        </span>
+                        <span className="flex items-center text-2xl m-5">
+                            <img
+                                src='src/assets/mongodb.svg'
+                                alt="mongodb logo" 
+                                style={{ height:'40px',width:"40px", marginRight:'15px'}}
+                            /> 
+                            MongoDB
+                        </span>
                     </div>
                 </motion.div> 
             </div>
