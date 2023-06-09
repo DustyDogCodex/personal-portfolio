@@ -32,7 +32,7 @@ function Project({ title, subtitle, links }) {
                 </p>
             </div>
             <img 
-                src={`./src/assets/${projectTitle}.png`}
+                src={`./images/${projectTitle}.png`}
                 alt={`${projectTitle} screenshot`} 
             />
         </motion.div>
