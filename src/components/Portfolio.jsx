@@ -1,4 +1,5 @@
 import Project from "./Project"
+import { RainbowLineBreak } from "./RainbowLineBreak"
 import SmallProject from "./SmallerProject"
 import { motion } from "framer-motion"
 
@@ -64,11 +65,46 @@ function Portfolio() {
     return (
         <section
             id="portfolio" 
-            className="p-20">
-            <div className="main-showcase">
-                <h2 className="heading">Recent Projects</h2>
-                {projectElements}
+            className="p-20"
+        >
+            <motion.div
+            className="md:w-2/4 mx-auto text-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, y: -50 },
+                    visible: { opacity: 1, y: 0}
+                }}
+            >
+                <div>
+                    <p className="font-permanentMarker text-red text-5xl font-semibold">
+                        My Projects
+                    </p>
+                    <div className="mt-5">
+                        <RainbowLineBreak/>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* PROJECTS */}
+            <div className="flex justify-center">
+                <motion.div
+                    className="sm:grid sm:grid-cols-3"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, y: -50 },
+                        visible: { opacity: 1, y: 0}
+                    }}
+                >
+
+                </motion.div>
             </div>
+
             <div className="honorable-mentions">
                 <h3 className="sub-heading">Honorable Mentions</h3>
                 <div className="small-project-display">
