@@ -22,11 +22,6 @@ function SidebarNavDots({ currentPage, setCurrentPage }){
                 onClick={() => setCurrentPage('projects')}
             />
             <AnchorLink 
-                className={`${currentPage === 'testimonials' ? selectedDot : "bg-dark-grey"} w-3 h-3 rounded-full`} 
-                href="#testimonials"
-                onClick={() => setCurrentPage('testimonials')}
-            />
-            <AnchorLink 
                 className={`${currentPage === 'contact' ? selectedDot : "bg-dark-grey"} w-3 h-3 rounded-full`} 
                 href="#contact"
                 onClick={() => setCurrentPage('contact')}

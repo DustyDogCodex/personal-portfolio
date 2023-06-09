@@ -77,7 +77,7 @@ function Skills() {
                         </span>
                         <span className="flex items-center text-2xl m-5">
                             <img
-                                src='src/assets/tailwindcss.svg'
+                                src='./images/tailwindcss.svg'
                                 alt="tailwingcss logo" 
                                 style={{ height:'40px',width:"40px", marginRight:'15px'}}
                             /> 
@@ -99,7 +99,7 @@ function Skills() {
                         </span>
                         <span className="flex items-center text-2xl m-5">
                             <img
-                                src='src/assets/mongodb.svg'
+                                src='./images/mongodb.svg'
                                 alt="mongodb logo" 
                                 style={{ height:'40px',width:"40px", marginRight:'15px'}}
                             /> 

@@ -12,8 +12,6 @@ function Project({ title, subtitle, links }) {
         visible: { opacity: 1, scale: 1 }
     }
 
-    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`
-
     return (
         <motion.div 
             variants={projectAnimation}
@@ -32,6 +30,7 @@ function Project({ title, subtitle, links }) {
                 </p>
             </div>
             <img 
+                className="w-[400px] max-h-[400px]"
                 src={`./images/${projectTitle}.png`}
                 alt={`${projectTitle} screenshot`} 
             />

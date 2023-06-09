@@ -43,6 +43,7 @@ function Portfolio() {
         }
     ]
 
+    //creating an array of projects for display
     const projectElements = projectList.map((proj,index) => {
         return (
             <Project 

@@ -10,7 +10,7 @@ const Link = ({ page, currentPage, setCurrentPage }) => {
 
     return(
         <AnchorLink 
-            className={`${currentPage === lowerCasePage ? "text-yellow" : ""} hover:text-yellow transition duration-500 hover:no-underline`} 
+            className={`${currentPage === lowerCasePage ? "text-yellow" : ""} font-robotoMono text-xl  hover:text-yellow transition duration-500 hover:no-underline`} 
             href={`#${lowerCasePage}`}
             onClick={() => setCurrentPage(lowerCasePage)}
         >
@@ -65,11 +65,6 @@ function Navbar({ currentPage, setCurrentPage }) {
                             setCurrentPage={setCurrentPage}
                         />
                         <Link
-                            page="Testimonials"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
                             page="Contact"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
@@ -99,30 +94,25 @@ function Navbar({ currentPage, setCurrentPage }) {
                         </div>
                         <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
                             <Link
-                            page="Home"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Skills"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Projects"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Testimonials"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Contact"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
+                                page="Home"
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Link
+                                page="Skills"
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Link
+                                page="Projects"
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Link
+                                page="Contact"
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
                         </div>
                     </div>
                 )}

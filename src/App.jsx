@@ -1,13 +1,14 @@
-import { useState } from 'react';
 import './App.css';
-import  { Skills } from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import useMediaQuery from './hooks/useMediaQuery'
+import { useState } from 'react';
+import { Skills } from './components/Skills';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 import { Home } from './components/Home';
 import { Navbar } from './components/Navbar';
 import { Portfolio } from './components/Portfolio';
-import useMediaQuery from './hooks/useMediaQuery'
 import { SidebarNavDots } from './components/SidebarNavDots';
+import { RainbowLineBreak } from './components/RainbowLineBreak';
 
 function App() {
 
@@ -33,8 +34,11 @@ function App() {
         }
       </div>
       <Home setCurrentPage={setCurrentPage}/>
+      <RainbowLineBreak/>
       <Skills/>
+      <RainbowLineBreak/>
       <Portfolio/>
+      <RainbowLineBreak/>
       <Contact/>
       <Footer/>
     </div>
