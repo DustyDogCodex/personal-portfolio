@@ -9,6 +9,7 @@ import { Navbar } from './components/Navbar';
 import { Portfolio } from './components/Portfolio';
 import { SidebarNavDots } from './components/SidebarNavDots';
 import { RainbowLineBreak } from './components/RainbowLineBreak';
+import { motion } from 'framer-motion';
 
 function App() {
 
@@ -25,21 +26,51 @@ function App() {
         setCurrentPage={setCurrentPage}
       />
       {/* sidebar navigation dots */}
-      <div>
+      <div className="w-5/6 mx-auto md:h-full">
         {aboveMediumScreens && (
           <SidebarNavDots 
             currentPage={currentPage}
             setCurrentPage= {setCurrentPage}
-          />)
-        }
+          />
+        )}
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setCurrentPage("home")}
+        >
+          <Home setCurrentPage={setCurrentPage}/>
+        </motion.div>
       </div>
-      <Home setCurrentPage={setCurrentPage}/>
       <RainbowLineBreak/>
-      <Skills/>
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setCurrentPage("skills")}
+        >
+          <Skills/>
+        </motion.div>
+      </div>
       <RainbowLineBreak/>
-      <Portfolio/>
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setCurrentPage("projects")}
+        >
+          <Portfolio/>
+        </motion.div>
+      </div>      
       <RainbowLineBreak/>
-      <Contact/>
+      <div className="w-5/6 mx-auto">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setCurrentPage("contact")}
+        >
+          <Contact/>
+        </motion.div>
+      </div>
       <Footer/>
     </div>
   );

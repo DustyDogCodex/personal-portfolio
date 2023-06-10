@@ -18,9 +18,10 @@ function Skills() {
             className="p-20"    
         >
             <div 
-                className="flex justify-between gap-16 mt-20">               
+                className="flex flex-col md:flex-row justify-between gap-16 mt-20"
+            >               
             <div 
-                className="w-1/2"
+                className="md:w-1/2 text-center md:text-left"
             >
                 <motion.div
                     initial="hidden"
@@ -43,7 +44,7 @@ function Skills() {
                 </motion.div>
             </div>
             <div
-                className="w-1/2"
+                className="md:w-1/2"
             >
                 <motion.div
                     initial="hidden"
@@ -58,9 +59,9 @@ function Skills() {
                     <h3 
                         className="text-center text-5xl text-emerald-500 font-permanentMarker"
                     >
-                        My skills include
+                        My skills
                     </h3>
-                    <div className="flex flex-col items-center m-8">
+                    <div className="flex flex-wrap md:flex-col items-center m-10">
                         <span className="flex items-center text-2xl m-5">
                             <FontAwesomeIcon 
                                 icon={faReact} 
