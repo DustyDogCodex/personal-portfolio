@@ -61,22 +61,22 @@ function Skills() {
                     >
                         My skills
                     </h3>
-                    <div className="flex flex-wrap md:flex-col items-center m-10">
-                        <span className="flex items-center text-2xl m-5">
+                    <div className="flex flex-wrap md:flex-col items-center md:m-10">
+                        <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faReact} 
                                 style={{color: "skyblue", height:'40px',width:"40px", marginRight:'15px'}}
                             /> 
                             ReactJS 
                         </span>
-                        <span className="flex items-center text-2xl m-5">
+                        <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faJs} 
                                 style={{color: "gold", height:'40px',width:"40px", marginRight:'15px'}}
                             /> 
                             JavaScript
                         </span>
-                        <span className="flex items-center text-2xl m-5">
+                        <span className="flex items-center text-2xl my-5 md:mx-5">
                             <img
                                 src='./images/tailwindcss.svg'
                                 alt="tailwingcss logo" 
@@ -84,21 +84,21 @@ function Skills() {
                             /> 
                             TailwindCSS
                         </span>
-                        <span className="flex items-center text-2xl m-5">
+                        <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faNodeJs} 
                                 style={{color: "green", height:'40px',width:"40px", marginRight:'15px'}}
                             />  
                             NodeJS
                         </span>
-                        <span className="flex items-center text-2xl m-5">
+                        <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faNodeJs} 
                                 style={{color: "white", height:'40px',width:"40px", marginRight:'15px'}}
                             />   
                             Express
                         </span>
-                        <span className="flex items-center text-2xl m-5">
+                        <span className="flex items-center text-2xl my-5 md:mx-5">
                             <img
                                 src='./images/mongodb.svg'
                                 alt="mongodb logo" 
