@@ -47,7 +47,7 @@ function Skills() {
 
             {/* MY SKILLS DIV */}
             <div
-                className="md:w-1/2 w-full flex flex-col items-center justify-center"
+                className="w-full md:w-1/2"
             >
                 <motion.div
                     initial="hidden"
@@ -56,7 +56,7 @@ function Skills() {
                     transition={{ duration: 0.5 }}
                     variants={{
                         hidden: { opacity: 0, x: 300 },
-                        visible: { opacity: 1, x: 100}
+                        visible: { opacity: 1, x: 0}
                     }}
                 >
                     <h3 
@@ -64,22 +64,22 @@ function Skills() {
                     >
                         My skills
                     </h3>
-                    <div className="flex flex-wrap items-center mt-4 md:flex-col">
-                        <span className="flex items-center text-2xl my-5 md:mx-5">
+                    <div className="flex items-center mt-4 flex-col">
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <FontAwesomeIcon 
                                 icon={faReact} 
                                 style={{color: "skyblue", height:'40px',width:"40px"}}
                             /> 
                             ReactJS 
                         </span>
-                        <span className="flex items-center text-2xl my-5 md:mx-5">
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <FontAwesomeIcon 
                                 icon={faJs} 
                                 style={{color: "gold", height:'40px',width:"40px"}}
                             /> 
                             JavaScript
                         </span>
-                        <span className="flex items-center text-2xl my-5 md:mx-5">
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <img
                                 src='./images/tailwindcss.svg'
                                 alt="tailwingcss logo" 
@@ -87,21 +87,21 @@ function Skills() {
                             /> 
                             TailwindCSS
                         </span>
-                        <span className="flex items-center text-2xl my-5 md:mx-5">
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <FontAwesomeIcon 
                                 icon={faNodeJs} 
                                 style={{color: "green", height:'40px',width:"40px"}}
                             />  
                             NodeJS
                         </span>
-                        <span className="flex items-center text-2xl my-5 md:mx-5">
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <FontAwesomeIcon 
                                 icon={faNodeJs} 
                                 style={{color: "white", height:'40px',width:"40px"}}
                             />   
                             Express
                         </span>
-                        <span className="flex items-center text-2xl my-5 md:mx-5">
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <img
                                 src='./images/mongodb.svg'
                                 alt="mongodb logo" 
