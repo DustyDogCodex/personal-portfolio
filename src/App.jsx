@@ -42,7 +42,7 @@ function App() {
         </motion.div>
       </div>
       <RainbowLineBreak/>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="md:w-5/6 w-full mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
