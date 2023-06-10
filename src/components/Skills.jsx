@@ -38,9 +38,9 @@ function Skills() {
                     >
                         Who I Am
                     </h2>
-                    <p className="mt-5 font-robotoMono text-lg">Hi, I'm Varun! I'm a passionate and experienced software engineer with a strong background in developing innovative solutions. I thrive on solving complex problems and creating efficient, scalable, and user-centric solutions. With expertise in ReactJS, Express, MongoDb and Tailwind, I have a solid foundation in full-stack development. My attention to detail, strong analytical mindset, and commitment to delivering high-quality code enable me to exceed client expectations and drive business growth.</p> 
+                    <p className="mt-5 font-robotoMono text-lg">Hi, I'm Varun! I'm a passionate and experienced software engineer who thrives on solving complex problems and creating efficient, scalable, and user-centric solutions. With expertise in ReactJS, Express, MongoDb and Tailwind, I have a solid foundation in full-stack development. My attention to detail, strong analytical mindset, and commitment to delivering high-quality code enable me to exceed client expectations and drive business growth.</p> 
                     <br/>
-                    <p className="mt-5 font-robotoMono text-lg">I am a proactive learner, always keeping up with the latest industry trends and continuously expanding my knowledge. Collaborative by nature, I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!</p> 
+                    <p className="mt-5 font-robotoMono text-lg">I am a proactive learner and collaborative by nature. I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!</p> 
                 </motion.div>
             </div>
             <div

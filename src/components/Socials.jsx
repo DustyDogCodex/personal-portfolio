@@ -29,19 +29,14 @@ function Socials(){
                     style={{color:'white', height:'30px', width:'30px'}}
                 />
             </a>
+            <FontAwesomeIcon 
+                className="hover:scale-125"
+                icon={faEnvelope} 
+                style={{color:'gold', height:'30px', width:'30px', cursor:'pointer'}}
+                onClick={() => window.location = 'mailto:varunmalaviya7@gmail.com'}
+            />
             <a 
-                href=""
-                target="_blank"
-                rel='noopener noreferrer'  
-                className="hover:scale-125" 
-            >
-                <FontAwesomeIcon 
-                    icon={faEnvelope} 
-                    style={{color:'gold', height:'30px', width:'30px'}}
-                />
-            </a>
-            <a 
-                href=""
+                href="https://www.linkedin.com/in/varun-malaviya-012677108/"
                 target="_blank"
                 rel='noopener noreferrer'  
                 className="hover:scale-125" 
