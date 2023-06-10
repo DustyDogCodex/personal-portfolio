@@ -15,11 +15,12 @@ function Skills() {
     return (
         <section 
             id="skills"
-            className="p-20"    
+            className="p-10"    
         >
             <div 
                 className="flex flex-col md:flex-row justify-between gap-16 mt-20"
-            >               
+            >   
+            {/* WHO I AM DIV */}            
             <div 
                 className="md:w-1/2 text-center md:text-left"
             >
@@ -43,8 +44,10 @@ function Skills() {
                     <p className="mt-5 font-robotoMono text-lg">I am a proactive learner and collaborative by nature. I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!</p> 
                 </motion.div>
             </div>
+
+            {/* MY SKILLS DIV */}
             <div
-                className="md:w-1/2 w-4/5"
+                className="md:w-1/2"
             >
                 <motion.div
                     initial="hidden"
@@ -61,18 +64,18 @@ function Skills() {
                     >
                         My skills
                     </h3>
-                    <div className="flex flex-wrap md:flex-col items-center md:m-10">
+                    <div className="flex flex-wrap items-center mt-8 md:flex-col">
                         <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faReact} 
-                                style={{color: "skyblue", height:'40px',width:"40px", marginRight:'15px'}}
+                                style={{color: "skyblue", height:'40px',width:"40px"}}
                             /> 
                             ReactJS 
                         </span>
                         <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faJs} 
-                                style={{color: "gold", height:'40px',width:"40px", marginRight:'15px'}}
+                                style={{color: "gold", height:'40px',width:"40px"}}
                             /> 
                             JavaScript
                         </span>
@@ -80,21 +83,21 @@ function Skills() {
                             <img
                                 src='./images/tailwindcss.svg'
                                 alt="tailwingcss logo" 
-                                style={{ height:'40px',width:"40px", marginRight:'15px'}}
+                                style={{ height:'40px',width:"40px"}}
                             /> 
                             TailwindCSS
                         </span>
                         <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faNodeJs} 
-                                style={{color: "green", height:'40px',width:"40px", marginRight:'15px'}}
+                                style={{color: "green", height:'40px',width:"40px"}}
                             />  
                             NodeJS
                         </span>
                         <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faNodeJs} 
-                                style={{color: "white", height:'40px',width:"40px", marginRight:'15px'}}
+                                style={{color: "white", height:'40px',width:"40px"}}
                             />   
                             Express
                         </span>
@@ -102,7 +105,7 @@ function Skills() {
                             <img
                                 src='./images/mongodb.svg'
                                 alt="mongodb logo" 
-                                style={{ height:'40px',width:"40px", marginRight:'15px'}}
+                                style={{ height:'40px',width:"40px"}}
                             /> 
                             MongoDB
                         </span>
