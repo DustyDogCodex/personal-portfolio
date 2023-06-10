@@ -8,5 +8,6 @@ body,
 .App{
   height: 100%;
   background: #010026;
+  overflow-x: hidden;
   @apply text-white;
 }
