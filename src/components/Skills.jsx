@@ -44,7 +44,7 @@ function Skills() {
                 </motion.div>
             </div>
             <div
-                className="md:w-1/2"
+                className="md:w-1/2 w-4/5"
             >
                 <motion.div
                     initial="hidden"
