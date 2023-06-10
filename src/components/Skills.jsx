@@ -47,7 +47,7 @@ function Skills() {
 
             {/* MY SKILLS DIV */}
             <div
-                className="md:w-1/2"
+                className="md:w-1/2 w-full flex flex-col items-center justify-center"
             >
                 <motion.div
                     initial="hidden"
@@ -64,7 +64,7 @@ function Skills() {
                     >
                         My skills
                     </h3>
-                    <div className="flex flex-wrap items-center mt-8 md:flex-col">
+                    <div className="flex flex-wrap items-center mt-4 md:flex-col">
                         <span className="flex items-center text-2xl my-5 md:mx-5">
                             <FontAwesomeIcon 
                                 icon={faReact} 
