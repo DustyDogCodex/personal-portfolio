@@ -33,7 +33,7 @@ function Socials(){
                 className="hover:scale-125"
                 icon={faEnvelope} 
                 style={{color:'gold', height:'30px', width:'30px', cursor:'pointer'}}
-                onClick={() => window.location = 'mailto:varunmalaviya7@gmail.com'}
+               /*  onClick={() => window.location = 'mailto:'} */
             />
             <a 
                 href="https://www.linkedin.com/in/varun-malaviya-012677108/"
