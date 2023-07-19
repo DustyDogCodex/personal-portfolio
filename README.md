@@ -14,12 +14,21 @@ Welcome to my web development portfolio! This website showcases my skills and pr
 
 - React
 - Tailwind CSS
-- HTML5
-- CSS3
-- JavaScript
+- Framer Motion
+- React-anchor-link-smooth-scroll
+- React-hook-form
 
 ## Installation
 
 1. Clone the repository: `git clone git@github.com:DustyDogCodex/personal-portfolio.git` 
 2. Navigate to the project directory: `cd personal-portfolio`
 3. Install the required dependencies: `npm install`
+
+## Usage
+
+This project is built using Vite, so to start the project on your local machine use code `npm run dev`.
+This will start the project on **http://localhost:5173** on your machine.
+
+## Contact
+
+Feel free to reach out to me through the contact form or my social media platforms present on my portfolio.
