@@ -1,4 +1,4 @@
-# My Web Dev Portfolio
+<h1 align=center>My Web Dev Portfolio</h1>
 
 Welcome to my web development portfolio! This website showcases my skills and projects as a web developer. It's built using React and styled with Tailwind CSS for a clean and modern look. It also uses Framer-Motion for animations that add a very modern look and feel to my portfolio. I have a passion for crafting creative and user-friendly web experiences. This portfolio serves as a representation of my journey, skills, and projects. Feel free to explore the different sections and get to know more about me and my work.
 
