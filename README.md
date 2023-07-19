@@ -18,7 +18,7 @@ Welcome to my web development portfolio! This website showcases my skills and pr
 - React-anchor-link-smooth-scroll
 - React-hook-form
 
-<h2 align=center>Installation<h2>
+<h2 align=center>Installation</h2>
 
 1. Clone the repository: `git clone git@github.com:DustyDogCodex/personal-portfolio.git` 
 2. Navigate to the project directory: `cd personal-portfolio`
