@@ -9,7 +9,7 @@ const useMediaQuery = (query) => {
         //this will be used to update media queries as user browses through the website
         const media = window.matchMedia(query)
 
-        //if current media query is not the same as our state variable matches, we update it 
+        //if current media query is not the same as the one stored in state variable matches, we update it 
         //this is done to grab the media query for the window when the website loads for the first time on a user's browser
         if( media.matches !== matches ){
             setMatches(media.matches)
