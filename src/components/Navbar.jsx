@@ -5,7 +5,7 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons"
 import { useState, useEffect } from "react"
 
 const Link = ({ page, currentPage, setCurrentPage }) => {
-    //page names will be capitalised for display. This will convert them to lowercase so I can accurately compare them for our conditional rendering. 
+    //page names will be capitalised for display. This will convert them to lowercase so they can accurately be compared for conditional rendering. 
     const lowerCasePage = page.toLowerCase()
 
     return(
@@ -24,13 +24,15 @@ function Navbar({ currentPage, setCurrentPage }) {
     //using state to toggle navbar menu
     const [ menuToggled, setMenuToggled ] = useState(false)
 
-    //checking for small screens with custom hooks
+    //checking to see if window is above a small screen with custom hook
     const aboveSmallScreens = useMediaQuery("(min-width: 768px)")
 
     //determining if navbar is at top of page or not.
     const [topOfPage, setTopOfPage] = useState(true)
 
     useEffect(() => {
+        //using handleScroll to determine if user is browsing top section of the website
+        //this is done to control the background color of the navbar. If user scrolls down the website, bg color changes to red
         const handleScroll = () => {
             window.scrollY === 0 ? setTopOfPage(true) : setTopOfPage(false)
         }
@@ -71,6 +73,7 @@ function Navbar({ currentPage, setCurrentPage }) {
                         />
                     </div>
                 ) : (
+                    /* this is what NavBar will look like for smaller screens when menu is toggled off */
                 <button
                     className="rounded-full bg-red p-2 flex items-center justify-center"
                     onClick={() => setMenuToggled(true)}

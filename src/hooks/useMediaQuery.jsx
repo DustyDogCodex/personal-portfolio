@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+//creating a custom hook for watching and updating media queries as different components will respond to different media breakpoints.
 const useMediaQuery = (query) => {
     //watching for when screen hits a partiuclar media breakpoint so the website can respond to it.
     const [ matches, setMatches ] = useState(false)
