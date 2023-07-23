@@ -48,8 +48,9 @@ function Navbar({ currentPage, setCurrentPage }) {
             <div className="flex items-center justify-between m-auto w-5/6">
                 <h3 className="font-permanentMarker text-5xl font-bold">VM</h3>
 
-                {/* this is what the navbar will look like for desktops/larger screens */}
+                {/* conditionally rendering navbar dictated by screen size */}
                 {aboveSmallScreens ? (
+                    /* this is what the navbar will look like for desktops/larger screens */
                     <div className="flex justify-between gap-16 font-roboto text-sm font-semibold">
                         <Link
                             page="Home"
