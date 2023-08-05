@@ -14,7 +14,7 @@ function Contact() {
             className="p-5"
         >
             <motion.div
-                className="md:w-2/4 mx-auto text-center"
+                className="md:w-2/4 mx-auto"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -65,7 +65,7 @@ function Contact() {
                         className="w-4/5 flex flex-col items-center justify-center"
                     >
                         <h3
-                            className="text-2xl text-amber-400 mb-3"
+                            className="text-3xl text-amber-400 mb-3"
                         >
                             Send me a message!
                         </h3>
@@ -82,7 +82,7 @@ function Contact() {
                                 )}
                                 type="text" 
                                 placeholder="Please enter your name"
-                                className="p-1 rounded-lg w-full bg-sky-400 placeholder:text-black"
+                                className="p-2 text-lg rounded-lg w-full bg-sky-400 placeholder:text-black"
                             />
                             {errors.name && (
                                 <p
@@ -101,7 +101,7 @@ function Contact() {
                                 )}
                                 type="text" 
                                 placeholder="Please enter your email"
-                                className="p-1 rounded-lg w-full bg-sky-400 placeholder:text-black mt-3"
+                                className="p-2 text-lg rounded-lg w-full bg-sky-400 placeholder:text-black mt-3"
                             />
                             {errors.email && (
                                 <p
@@ -124,7 +124,7 @@ function Contact() {
                                     )}
                                     type="text" 
                                     placeholder="Enter your message"
-                                    className="p-1 rounded-lg w-full bg-sky-400 placeholder:text-black"
+                                    className="p-2 text-lg rounded-lg w-full bg-sky-400 placeholder:text-black"
                                     rows={5}
                                 />
                                 {errors.message && (
