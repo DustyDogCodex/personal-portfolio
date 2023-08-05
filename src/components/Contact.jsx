@@ -6,7 +6,15 @@ import { RainbowLineBreak } from "./RainbowLineBreak"
 function Contact() {
 
     //adding useForm to handle sending a message
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, trigger, formState: { errors } } = useForm()
+
+    //function to submit form and make sure inputs have been triggered before submission
+    const onSubmit = async (e) => {
+        const isValid = await trigger();
+        if (!isValid) {
+            e.preventDefault();
+        }
+    }
 
     return (
         <section
@@ -72,7 +80,10 @@ function Contact() {
                         
                         <form 
                             className="w-4/5"
-                            netlify
+                            target="_blank"
+                            onSubmit={onSubmit}
+                            action="https://formsubmit.co/280e83d4b1c4a5bbf549d02633e4c5fa"
+                            method="POST"
                         >
                             <input 
                                 {...register('name', 
