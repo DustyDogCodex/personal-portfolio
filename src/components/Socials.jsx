@@ -15,7 +15,7 @@ function Socials(){
             >
                 <FontAwesomeIcon 
                     icon={faTwitter} 
-                    style={{color:'blue', height:'30px', width:'30px'}}
+                    style={{color:'#26a7de', height:'30px', width:'30px'}}
                 />
             </a>
             <a 
@@ -29,12 +29,6 @@ function Socials(){
                     style={{color:'white', height:'30px', width:'30px'}}
                 />
             </a>
-            <FontAwesomeIcon 
-                className="hover:scale-125"
-                icon={faEnvelope} 
-                style={{color:'gold', height:'30px', width:'30px', cursor:'pointer'}}
-               /*  onClick={() => window.location = 'mailto:'} */
-            />
             <a 
                 href="https://www.linkedin.com/in/varun-malaviya-012677108/"
                 target="_blank"

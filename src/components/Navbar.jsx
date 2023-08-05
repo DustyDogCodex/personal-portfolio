@@ -46,7 +46,7 @@ function Navbar({ currentPage, setCurrentPage }) {
     return(
         <nav className={`${navBg} z-40 w-full fixed top-0 py-5`}>
             <div className="flex items-center justify-between m-auto w-5/6">
-                <h3 className="font-permanentMarker text-5xl font-bold">VM</h3>
+                <h3 className="font-permanentMarker text-5xl font-bold text-amber-400">VM</h3>
 
                 {/* conditionally rendering navbar dictated by screen size */}
                 {aboveSmallScreens ? (
