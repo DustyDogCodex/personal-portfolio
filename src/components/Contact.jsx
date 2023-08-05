@@ -82,7 +82,7 @@ function Contact() {
                             className="w-4/5"
                             target="_blank"
                             onSubmit={onSubmit}
-                            action="https://formsubmit.co/280e83d4b1c4a5bbf549d02633e4c5fa"
+                            action="https://formsubmit.co/varunmalaviya7@gmail.com"
                             method="POST"
                         >
                             <input 
