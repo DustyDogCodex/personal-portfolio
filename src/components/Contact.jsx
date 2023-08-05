@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { motion } from "framer-motion"
 import { Socials } from "./Socials"
+import { RainbowLineBreak } from "./RainbowLineBreak"
 
 function Contact() {
 
@@ -10,9 +11,10 @@ function Contact() {
     return (
         <section
             id="contact"
-            className="p-10"
+            className="p-5"
         >
             <motion.div
+                className="md:w-2/4 mx-auto text-center"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -21,12 +23,19 @@ function Contact() {
                     hidden: { opacity: 0, x: -50 },
                     visible: { opacity: 1, x: 0}
                 }}
-            >
-                <h2 
-                    className="mt-5 text-5xl text-center font-permanentMarker text-amber-500 mb-10"
-                >
-                    Contact me to get started!
-                </h2>
+            >   
+                <div>
+                    <h2 
+                        className="mt-5 text-5xl text-center font-permanentMarker text-amber-500"
+                    >
+                        Contact me to get started!
+                    </h2>
+                    <div
+                        className="mt-5"
+                    >
+                        <RainbowLineBreak />
+                    </div>
+                </div>
             </motion.div>
 
             <motion.div
@@ -41,81 +50,105 @@ function Contact() {
                 }}
             >
                 <img 
-                    className="w-[450px] h-[350px] rounded-lg"
-                    src="./images/contact-me.jpeg" 
+                    className="w-fit h-fit rounded-lg"
+                    src="./images/programmer.jpg" 
                     alt="contact me" 
                 />
-                <div className="flex flex-col items-center justify-center p-5">
-                    <p 
-                        className="text-center font-robotoMono text-lg"
-                    >
-                        I am currently looking for new oppurtunities! If you would like to hire me, collaborate on a project, or buy me pizza/coffee feel free to contact me using one of the mediums below!
-                    </p>
+
+                {/* form and socials section */}
+                <div className="flex flex-col items-center justify-center p-5 w-4/5">
+
                     <Socials/>
 
                     {/* form for submitting a message. added netlify attribute to let netlify process form submission */}
-                    <form 
-                        className="border-2 border-amber-500 w-full py-5 px-20"
-                        netlify
+                    <div
+                        className="w-4/5 flex flex-col items-center justify-center"
                     >
-                        <div
-                            className="flex items-center justify-between"
+                        <h3
+                            className="text-2xl text-amber-400 mb-3"
                         >
-                            <label
-                                className="text-lg text-amber-400"
-                            >
-                                Name
-                            </label>
+                            Send me a message!
+                        </h3>
+                        
+                        <form 
+                            className="w-4/5"
+                            netlify
+                        >
                             <input 
-                                {...register('name', { required: true })}
+                                {...register('name', 
+                                    { 
+                                        required: true 
+                                    }
+                                )}
                                 type="text" 
                                 placeholder="Please enter your name"
-                                className="p-1 rounded-lg ml-5 w-full bg-sky-400 placeholder:text-black"
+                                className="p-1 rounded-lg w-full bg-sky-400 placeholder:text-black"
                             />
-                        </div>
-
-                        <div
-                            className="flex items-center justify-between mt-3"
-                        >
-                            <label
-                                className="text-lg text-amber-400"
-                            >
-                                Email
-                            </label>
+                            {errors.name && (
+                                <p
+                                    className='bg-amber-500 text-red mt-3'
+                                >
+                                    A name is required
+                                </p>
+                            )}
+                        
                             <input 
-                                {...register('email', { required: true })}
+                                {...register('email', 
+                                    { 
+                                        required: true, 
+                                        pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i 
+                                    }
+                                )}
                                 type="text" 
                                 placeholder="Please enter your email"
-                                className="p-1 rounded-lg ml-5 w-full bg-sky-400 placeholder:text-black"
+                                className="p-1 rounded-lg w-full bg-sky-400 placeholder:text-black mt-3"
                             />
-                        </div>
+                            {errors.email && (
+                                <p
+                                    className='bg-amber-500 text-red mt-3'
+                                >
+                                    {errors.email.type === 'required' && "An email is required"}
+                                    {errors.email.type === 'pattern' && "Please enter a valid email address"}
+                                </p>
+                            )}
 
-                        <div
-                            className="flex items-center justify-between mt-3"
-                        >
-                            <label
-                                className="text-lg text-amber-400"
+                            <div
+                                className="flex items-center justify-between mt-3"
                             >
-                                Message
-                            </label>
-                            <textarea
-                                {...register('message', { required: true })}
-                                type="text" 
-                                placeholder="Enter your message"
-                                className="p-1 rounded-lg ml-5 w-full bg-sky-400 placeholder:text-black"
-                            />
-                        </div>
+                                <textarea
+                                    {...register('message', 
+                                        { 
+                                            required: true, 
+                                            maxLength: 2000 
+                                        }
+                                    )}
+                                    type="text" 
+                                    placeholder="Enter your message"
+                                    className="p-1 rounded-lg w-full bg-sky-400 placeholder:text-black"
+                                    rows={5}
+                                />
+                                {errors.message && (
+                                    <p
+                                        className='bg-amber-500 text-red mt-3'
+                                    >
+                                        {errors.message.type === 'required' && "A message is required"}
+                                        {errors.message.type === 'maxLength' && "Message cannot be more than 2000 characters"}
+                                    </p>
+                                )}
+                            </div>
 
-                        <div
-                            className="flex items-center justify-center"
-                        >
-                            <button
-                                className="bg-green-500 py-1 px-3 text-lg rounded-lg mt-5"
+                            <div
+                                className="flex items-center justify-center"
                             >
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+                                <button
+                                    type="submit"
+                                    className="bg-green-500 py-1 px-3 text-lg rounded-lg mt-5 hover:bg-red transition duration-500"
+                                >
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </motion.div>
         </section>

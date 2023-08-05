@@ -61,7 +61,7 @@ function Portfolio() {
             className="p-20"
         >
             <motion.div
-            className="md:w-2/4 mx-auto text-center"
+                className="md:w-2/4 mx-auto text-center"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -72,7 +72,9 @@ function Portfolio() {
                 }}
             >
                 <div>
-                    <p className="font-permanentMarker text-red text-5xl font-semibold">
+                    <p 
+                        className="font-permanentMarker text-red text-5xl font-semibold"
+                    >
                         My Projects
                     </p>
                     <div className="mt-5">
