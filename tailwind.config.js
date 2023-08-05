@@ -28,7 +28,7 @@ export default {
         permanentMarker: ["Permanent Marker", "cursive"]
       },
       content: {
-        brush: "url('./images/brush.png')"
+        brush: "url('../images/brush.png')"
       }
     },
     screens: {
