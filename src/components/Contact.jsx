@@ -58,13 +58,13 @@ function Contact() {
                 }}
             >
                 <img 
-                    className="w-fit h-fit rounded-lg"
+                    className="md:w-1/2 w-4/5 rounded-lg mt-5 md:mt-0"
                     src="./images/programmer.jpg" 
                     alt="contact me" 
                 />
 
                 {/* form and socials section */}
-                <div className="flex flex-col items-center justify-center p-5 w-4/5">
+                <div className="flex flex-col items-center justify-center md:w-4/5 w-full">
 
                     <Socials/>
 
@@ -73,13 +73,13 @@ function Contact() {
                         className="w-4/5 flex flex-col items-center justify-center"
                     >
                         <h3
-                            className="text-3xl text-amber-400 mb-3"
+                            className="text-3xl text-amber-400 mb-3 text-center"
                         >
                             Send me a message!
                         </h3>
                         
                         <form 
-                            className="w-4/5"
+                            className="md:w-4/5 w-full"
                             target="_blank"
                             onSubmit={onSubmit}
                             action="https://formsubmit.co/280e83d4b1c4a5bbf549d02633e4c5fa"
@@ -92,7 +92,7 @@ function Contact() {
                                     }
                                 )}
                                 type="text" 
-                                placeholder="Please enter your name"
+                                placeholder="Name"
                                 className="p-2 text-lg rounded-lg w-full bg-sky-400 placeholder:text-black"
                             />
                             {errors.name && (
@@ -111,7 +111,7 @@ function Contact() {
                                     }
                                 )}
                                 type="text" 
-                                placeholder="Please enter your email"
+                                placeholder="Email"
                                 className="p-2 text-lg rounded-lg w-full bg-sky-400 placeholder:text-black mt-3"
                             />
                             {errors.email && (
@@ -134,7 +134,7 @@ function Contact() {
                                         }
                                     )}
                                     type="text" 
-                                    placeholder="Enter your message"
+                                    placeholder="Message"
                                     className="p-2 text-lg rounded-lg w-full bg-sky-400 placeholder:text-black"
                                     rows={5}
                                 />

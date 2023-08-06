@@ -1,5 +1,8 @@
 /* styling for div containing displayed projects in the portfolio section. Honorable mentions are in a separate component */
 import { motion } from "framer-motion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 function Project({ title, subtitle, links }) {
 
@@ -16,19 +19,41 @@ function Project({ title, subtitle, links }) {
         <motion.div 
             variants={projectAnimation}
             className="relative"    
-        >
+        >   
+            {/* Brief project description when user hovers over project screenshot */}
             <div
-                className="absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 z-30 flex bg-gray flex-col justify-center items-center text-center p-16 text-deep-blue"
+                className="absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 z-30 flex bg-gray flex-col justify-center items-center text-center p-5 text-deep-blue"
             >
                 <p 
-                    className="text-2xl font-roboto"
+                    className="text-lg md:text-2xl font-roboto"
                 >
                     {title}
                 </p>
-                <p className="mt-7">
+                <p className="mt-2 text-sm sm:text-base">
                     {subtitle}
                 </p>
+
+                {/* github and live demo links for project */}
+                <div
+                    className="flex items-center mt-2"
+                >
+                    <a href={`${links.github}`} target="_blank">
+                        <FontAwesomeIcon 
+                            icon={faGithub} 
+                            style={{color: "#000000", height:'18px', width:'18px'}} 
+                        />
+                    </a>
+
+                    <a href={`${links.live}`} target="_blank">
+                        <FontAwesomeIcon 
+                            icon={faArrowUpRightFromSquare} 
+                            style={{color: "#000000", marginLeft:'10px'}} 
+                        />
+                    </a>
+                </div>
             </div>
+
+            {/* project screenshot */}
             <img 
                 className="w-[400px] max-h-[400px]"
                 src={`./images/${projectTitle}.png`}

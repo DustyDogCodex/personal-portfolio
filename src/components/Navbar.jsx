@@ -49,53 +49,65 @@ function Navbar({ currentPage, setCurrentPage }) {
                 <h3 className="font-permanentMarker text-5xl font-bold text-amber-400">VM</h3>
 
                 {/* conditionally rendering navbar dictated by screen size */}
-                {aboveSmallScreens ? (
-                    /* this is what the navbar will look like for desktops/larger screens */
-                    <div className="flex justify-between gap-16 font-roboto text-sm font-semibold">
-                        <Link
-                            page="Home"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Skills"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Projects"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                        <Link
-                            page="Contact"
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
-                    </div>
-                ) : (
-                    /* this is what NavBar will look like for smaller screens when menu is toggled off */
-                <button
-                    className="rounded-full bg-red p-2 flex items-center justify-center"
-                    onClick={() => setMenuToggled(true)}
-                >
-                    <FontAwesomeIcon 
-                        icon={faBars} 
-                        style={{color: "#f5c211", height:'30px', width:'30px'}} 
-                    />
-                </button>)}
+                {aboveSmallScreens 
+                    ? 
+                        (
+                            /* this is what the navbar will look like for desktops/larger screens */
+                            <div className="flex justify-between gap-16 font-roboto text-sm font-semibold">
+                                <Link
+                                    page="Home"
+                                    currentPage={currentPage}
+                                    setCurrentPage={setCurrentPage}
+                                />
+                                <Link
+                                    page="Skills"
+                                    currentPage={currentPage}
+                                    setCurrentPage={setCurrentPage}
+                                />
+                                <Link
+                                    page="Projects"
+                                    currentPage={currentPage}
+                                    setCurrentPage={setCurrentPage}
+                                />
+                                <Link
+                                    page="Contact"
+                                    currentPage={currentPage}
+                                    setCurrentPage={setCurrentPage}
+                                />
+                            </div>
+                        ) 
+                    :   
+                        (
+                            /* this is what NavBar will look like for smaller screens when menu is toggled off */
+                            <button
+                                className="rounded-full bg-red p-2 flex items-center justify-center hover:scale-125 transition duration-300"
+                                onClick={() => setMenuToggled(true)}
+                            >
+                                <FontAwesomeIcon 
+                                    icon={faBars} 
+                                    style={{color: "#f5c211", height:'30px', width:'30px'}} 
+                                />
+                            </button>
+                        )
+                }
 
-                {/* when user toggles menu for small/mobile screens */}
+                {/* toggleable side menu for small/mobile screens */}
                 {!aboveSmallScreens && menuToggled && (
                     <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                        {/* X button on top to close menu */}
                         <div className="flex justify-end p-10">
-                            <button onClick={() => setMenuToggled(!menuToggled)}>
+                            <button 
+                                onClick={() => setMenuToggled(!menuToggled)}
+                                className="bg-deep-blue p-2 rounded-full flex items-center hover:bg-red transition duration-500"
+                            >
                                 <FontAwesomeIcon 
                                     icon={faX} 
                                     style={{color: "#f5c211", height:'30px', width:'30px'}} 
                                 />
                             </button>
                         </div>
+
+                        {/* links inside menu */}
                         <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
                             <Link
                                 page="Home"

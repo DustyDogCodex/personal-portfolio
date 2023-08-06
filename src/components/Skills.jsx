@@ -18,8 +18,9 @@ function Skills() {
             className="p-10"    
         >
             <div 
-                className="flex flex-col md:flex-row justify-between gap-16 mt-20"
+                className="flex flex-col md:flex-row justify-between mt-12"
             >   
+
             {/* WHO I AM DIV */}            
             <div 
                 className="md:w-1/2 text-center md:text-left"
@@ -39,15 +40,26 @@ function Skills() {
                     >
                         Who I Am
                     </h2>
-                    <p className="mt-5 font-robotoMono text-lg">Hi, I'm Varun! I'm a passionate and experienced software engineer who thrives on solving complex problems and creating efficient, scalable, and user-centric solutions. With expertise in ReactJS, Express, MongoDb and Tailwind, I have a solid foundation in full-stack development. My attention to detail, strong analytical mindset, and commitment to delivering high-quality code enable me to exceed client expectations and drive business growth.</p> 
+
+                    <p
+                        className="mt-5 font-robotoMono text-lg"
+                    >
+                        Hi, I'm Varun! I'm a passionate and experienced software engineer who thrives on solving complex problems and creating efficient, scalable, and user-centric solutions. With expertise in ReactJS, Express, MongoDb and Tailwind, I have a solid foundation in full-stack development. My attention to detail, strong analytical mindset, and commitment to delivering high-quality code enable me to exceed client expectations and drive business growth.
+                    </p> 
+                    
                     <br/>
-                    <p className="mt-5 font-robotoMono text-lg">I am a proactive learner and collaborative by nature. I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!</p> 
+                    
+                    <p 
+                        className="mt-5 font-robotoMono text-lg"
+                    >
+                        I am a proactive learner and collaborative by nature. I enjoy working in cross-functional teams, leveraging effective communication to bring ideas to life. If you're looking for a dedicated and versatile software engineer who can tackle challenging projects with enthusiasm and expertise, look no further! I am ready to embark on my next exciting endeavor with you!
+                    </p> 
                 </motion.div>
             </div>
 
             {/* MY SKILLS DIV */}
             <div
-                className="w-full md:w-1/2"
+                className="w-full md:w-1/2 mt-10 md:mt-0"
             >
                 <motion.div
                     initial="hidden"
@@ -55,7 +67,7 @@ function Skills() {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }}
                     variants={{
-                        hidden: { opacity: 0, x: 300 },
+                        hidden: { opacity: 0, x: -50 },
                         visible: { opacity: 1, x: 0}
                     }}
                 >

@@ -47,10 +47,10 @@ function Home({ setCurrentPage }) {
                         visible: { opacity: 1, x: 0}
                     }}
                 >
-                    <p className="mx-5 text-6xl font-robotoMono z-10 text-center md:text-start">
-                        Varun <span className="ml-1 xs:relative xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[-25px] before:-top-[70px] before:z-[-1]">Malaviya</span>
+                    <p className="mx-5 font-robotoMono z-10 text-center md:text-start">
+                        <span className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-green-400 to-sky-400 hover:from-pink-500 hover:to-yellow">Varun Malaviya</span>
                     </p>
-                    <p className="mx-5 my-10 text-center md:text-start">
+                    <p className="mx-5 my-12 text-lg text-center md:text-start">
                         Creating Innovative Solutions, One Line of Code at a Time
                     </p>
                 </motion.div>
@@ -67,14 +67,14 @@ function Home({ setCurrentPage }) {
                     }}
                 >
                     <AnchorLink
-                        className="bg-gradient-rainblue rounded-lg py-3 px-5 mx-5 font-semibold hover:bg-blue hover:text-white transition duration-500"
+                        className="bg-gradient-rainblue rounded-lg py-3 px-5 mx-5 font-semibold hover:scale-110"
                         onClick={() => setCurrentPage('projects')}
                         href="#projects"
                     >
                         Browse Portfolio
                     </AnchorLink>
                     <AnchorLink
-                        className="bg-gradient-rainbow rounded-lg py-3 px-5 mx-5 font-semibold hover:bg-blue hover:text-white transition duration-500"
+                        className="bg-gradient-rainbow rounded-lg py-3 px-5 mx-5 font-semibold hover:scale-110"
                         onClick={() => setCurrentPage('contact')}
                         href="#contact"
                     >

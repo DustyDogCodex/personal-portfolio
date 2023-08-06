@@ -16,7 +16,7 @@ function Portfolio() {
     const projectList = [
         {
             title: 'Tenzies', 
-            subtitle: 'The first player to roll the same 10 digits with 10 different dice wins!',
+            subtitle: 'Roll the same 10 digits with 10 different dice to win!',
             links: 
             {
                 github: 'https://github.com/DustyDogCodex/Tenzies', 
@@ -34,7 +34,7 @@ function Portfolio() {
         },
         {
             title: 'Brise', 
-            subtitle: 'Weather app that forecasts weather for your current location',
+            subtitle: 'Weather forecasts for your current location',
             links: 
             {
                 github: 'https://github.com/DustyDogCodex/Brise-Weather-App', 
@@ -58,7 +58,7 @@ function Portfolio() {
     return (
         <section
             id="projects" 
-            className="p-20"
+            className="p-10 md:p-20"
         >
             {/* section heading */}
             <motion.div
@@ -78,6 +78,7 @@ function Portfolio() {
                     >
                         My Projects
                     </p>
+
                     <div className="mt-5">
                         <RainbowLineBreak/>
                     </div>
@@ -104,7 +105,7 @@ function Portfolio() {
                     <div 
                         className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-roboto font-bold"
                     >
-                        SMOOTH USER EXPERIENCE
+                        SMOOTH USER EXPERIENCES
                     </div>
                 </motion.div>
             </div>
