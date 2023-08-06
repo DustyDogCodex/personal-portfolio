@@ -26,9 +26,6 @@ export default {
         roboto: ["Roboto", "sans-serif"],
         robotoMono: ["Roboto Mono", "monospace"],
         permanentMarker: ["Permanent Marker", "cursive"]
-      },
-      content: {
-        brush: "url('../images/brush.png')"
       }
     },
     screens: {
