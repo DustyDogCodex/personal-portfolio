@@ -47,8 +47,8 @@ function Home({ setCurrentPage }) {
                         visible: { opacity: 1, x: 0}
                     }}
                 >
-                    <p className="mx-5 font-robotoMono z-10 text-center md:text-start">
-                        <span className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-green-400 to-sky-400 hover:from-pink-500 hover:to-yellow">Varun Malaviya</span>
+                    <p className="mx-5 font-robotoMono text-center md:text-start">
+                        <span className="font-extrabold text-transparent text-xl md:text-6xl bg-clip-text bg-gradient-to-r from-green-400 to-sky-400 hover:from-pink-500 hover:to-yellow">Varun Malaviya</span>
                     </p>
                     <p className="mx-5 my-12 text-lg text-center md:text-start">
                         Creating Innovative Solutions, One Line of Code at a Time
