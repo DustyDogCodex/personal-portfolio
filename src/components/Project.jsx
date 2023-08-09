@@ -40,14 +40,14 @@ function Project({ title, subtitle, links }) {
                     <a href={`${links.github}`} target="_blank">
                         <FontAwesomeIcon 
                             icon={faGithub} 
-                            style={{color: "#000000", height:'18px', width:'18px'}} 
+                            style={{color: "#000000", height:'25px', width:'25px'}} 
                         />
                     </a>
 
                     <a href={`${links.live}`} target="_blank">
                         <FontAwesomeIcon 
                             icon={faArrowUpRightFromSquare} 
-                            style={{color: "#000000", marginLeft:'10px'}} 
+                            style={{color: "#000000", marginLeft:'15px', height:'22px', width:'22px'}} 
                         />
                     </a>
                 </div>

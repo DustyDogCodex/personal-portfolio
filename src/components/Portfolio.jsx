@@ -58,7 +58,7 @@ function Portfolio() {
     return (
         <section
             id="projects" 
-            className="p-10 md:p-20"
+            className="p-10 mt-12 md:p-20"
         >
             {/* section heading */}
             <motion.div

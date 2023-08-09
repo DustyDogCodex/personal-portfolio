@@ -93,7 +93,7 @@ function Navbar({ currentPage, setCurrentPage }) {
 
                 {/* toggleable side menu for small/mobile screens */}
                 {!aboveSmallScreens && menuToggled && (
-                    <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                    <div className={`fixed right-0 bottom-0 h-full bg-blue w-[250px] ease-in-out duration-300 ${ menuToggled ? "translate-x-0" : "translate-x-full" }`}>
                         {/* X button on top to close menu */}
                         <div className="flex justify-end p-10">
                             <button 

@@ -10,7 +10,7 @@ function Home({ setCurrentPage }) {
     return (
         <section
             id="home"
-            className="md:flex md:justify-between md:items-center gap-16 py-10"
+            className="md:flex md:justify-between md:items-center gap-16 py-10 md:mt-16"
         >   
             {/* IMAGE SECTION  */}
             <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
@@ -22,7 +22,7 @@ function Home({ setCurrentPage }) {
                         <img 
                             src="./images/profile.png" 
                             alt="varun's headshot"
-                            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]" 
+                            className="shadow-lg shadow-red hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]" 
                         />
                     </div>
                 ) : (
@@ -30,7 +30,7 @@ function Home({ setCurrentPage }) {
                     <img 
                         src="./images/profile.png" 
                         alt="varun's headshot"
-                        className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]" 
+                        className="rounded-lg shadow-lg shadow-red over:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]" 
                     />
                 )}
             </div>
@@ -48,7 +48,7 @@ function Home({ setCurrentPage }) {
                     }}
                 >
                     <p className="mx-5 font-robotoMono text-center md:text-start">
-                        <span className="font-extrabold text-transparent text-xl md:text-6xl bg-clip-text bg-gradient-to-r from-green-400 to-sky-400 hover:from-pink-500 hover:to-yellow">Varun Malaviya</span>
+                        <span className="font-extrabold text-transparent text-4xl md:text-7xl bg-clip-text bg-gradient-to-r from-green-400 to-sky-400 hover:from-pink-500 hover:to-yellow">Varun Malaviya</span>
                     </p>
                     <p className="mx-5 my-12 text-lg text-center md:text-start">
                         Creating Innovative Solutions, One Line of Code at a Time
@@ -67,12 +67,13 @@ function Home({ setCurrentPage }) {
                     }}
                 >
                     <AnchorLink
-                        className="bg-gradient-rainblue rounded-lg py-3 px-5 mx-5 font-semibold hover:scale-110"
+                        className="bg-gradient-rainblue rounded-lg py-3 px-2 md:px-5 md:mx-5 font-semibold hover:scale-110"
                         onClick={() => setCurrentPage('projects')}
                         href="#projects"
                     >
                         Browse Portfolio
                     </AnchorLink>
+
                     <AnchorLink
                         className="bg-gradient-rainbow rounded-lg py-3 px-5 mx-5 font-semibold hover:scale-110"
                         onClick={() => setCurrentPage('contact')}

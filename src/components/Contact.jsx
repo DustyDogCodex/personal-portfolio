@@ -6,13 +6,20 @@ import { RainbowLineBreak } from "./RainbowLineBreak"
 function Contact() {
 
     //adding useForm to handle sending a message
-    const { register, trigger, formState: { errors } } = useForm()
+    const { register, trigger, formState: { errors }, reset } = useForm({
+        defaultValues: {
+            name: '',
+            email:'',
+            message:''
+        }
+    })
 
     //function to submit form and make sure inputs have been triggered before submission
     const onSubmit = async (e) => {
-        const isValid = await trigger();
+        const isValid = await trigger()
         if (!isValid) {
-            e.preventDefault();
+            e.preventDefault()
+            reset()
         }
     }
 
