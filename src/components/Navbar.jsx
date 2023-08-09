@@ -92,8 +92,12 @@ function Navbar({ currentPage, setCurrentPage }) {
                 }
 
                 {/* toggleable side menu for small/mobile screens */}
-                {!aboveSmallScreens && menuToggled && (
-                    <div className={`fixed right-0 bottom-0 h-full bg-blue w-[250px] ease-in-out duration-300 ${ menuToggled ? "translate-x-0" : "translate-x-full" }`}>
+                {/* menu will slide in when user clicks the menu icon. Additionally, if user switches from a small screen to a larger screen, the menu will be hidden so it doesn't stay on screen on larger screens */}
+                {/* after user clicks on a link, the menu will close automatically */}
+                {(
+                    <div 
+                        className={`fixed right-0 bottom-0 h-full bg-blue w-[250px] ease-in-out duration-300 ${ menuToggled ? "translate-x-0" : "translate-x-full" } ${aboveSmallScreens ? 'hidden' : ''}`}
+                    >
                         {/* X button on top to close menu */}
                         <div className="flex justify-end p-10">
                             <button 
@@ -108,7 +112,11 @@ function Navbar({ currentPage, setCurrentPage }) {
                         </div>
 
                         {/* links inside menu */}
-                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                        <div 
+                            className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue"
+                            /* closes menu after a link is clicked */
+                            onClick={() => setMenuToggled(!menuToggled)}
+                        >
                             <Link
                                 page="Home"
                                 currentPage={currentPage}
