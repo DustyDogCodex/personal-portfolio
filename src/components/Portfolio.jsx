@@ -33,6 +33,15 @@ function Portfolio() {
             }
         },
         {
+            title: 'Do You Memba', 
+            subtitle: 'A King of the Hill themed memory card game built using React',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/do-you-memba', 
+                live: 'https://dustydogcodex.github.io/do-you-memba/'
+            }
+        },
+        {
             title: 'Tenzies', 
             subtitle: 'Roll the same 10 digits with 10 different dice to win!',
             links: 
