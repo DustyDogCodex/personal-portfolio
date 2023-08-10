@@ -15,6 +15,24 @@ function Portfolio() {
     //an array containing a list of featured projects to be displayed.
     const projectList = [
         {
+            title: 'Dost', 
+            subtitle: 'Full stack social media app',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/Dost', 
+                live: 'https://dost-production.up.railway.app/'
+            }
+        },
+        {
+            title: 'My Portfolio', 
+            subtitle: 'My fully responsive custom portfolio website',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/personal-portfolio', 
+                live: 'https://dustydogcodex.github.io/personal-portfolio/'
+            }
+        },
+        {
             title: 'Tenzies', 
             subtitle: 'Roll the same 10 digits with 10 different dice to win!',
             links: 
@@ -30,6 +48,15 @@ function Portfolio() {
             {
                 github: 'https://github.com/DustyDogCodex/Meme-Maker-9000', 
                 live: 'https://dustydogcodex.github.io/Meme-Maker-9000/'
+            }
+        },
+        {
+            title: 'Hedgehog HedgeFund', 
+            subtitle: 'React+Bootstrap website for a fictional company',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/HedgeHog-HedgeFund', 
+                live: 'https://dustydogcodex.github.io/HedgeHog-HedgeFund/'
             }
         },
         {

@@ -27,7 +27,7 @@ function App() {
       />
 
       {/* sidebar navigation dots */}
-      <div className="w-5/6 lg:w-4/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full">
         {aboveMediumScreens && (
           <SidebarNavDots 
             currentPage={currentPage}
@@ -45,7 +45,7 @@ function App() {
 
       <RainbowLineBreak/>
       
-      <div className="md:w-5/6 lg:w-3/5 w-full mx-auto md:h-full">
+      <div className="md:w-5/6 w-full mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -69,7 +69,7 @@ function App() {
       
       <RainbowLineBreak/>
       
-      <div className="w-5/6 lg:w-3/5 mx-auto">
+      <div className="w-5/6 mx-auto">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"

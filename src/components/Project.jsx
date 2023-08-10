@@ -55,7 +55,7 @@ function Project({ title, subtitle, links }) {
 
             {/* project screenshot */}
             <img 
-                className="w-[400px] max-h-[400px]"
+                className="w-[400px] max-h-[400px] "
                 src={`./images/${projectTitle}.png`}
                 alt={`${projectTitle} screenshot`} 
             />
