@@ -16,11 +16,29 @@ function Portfolio() {
     const projectList = [
         {
             title: 'Dost', 
-            subtitle: 'Full stack social media app',
+            subtitle: 'Responsive full stack social media app',
             links: 
             {
                 github: 'https://github.com/DustyDogCodex/Dost', 
                 live: 'https://dost-production.up.railway.app/'
+            }
+        },
+        {
+            title: 'Gasbnb', 
+            subtitle: 'Responsive full stack Airbnb clone',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/Gasbnb', 
+                live: 'https://gasbnb-production.up.railway.app/'
+            }
+        },
+        {
+            title: 'Bloggy', 
+            subtitle: 'Read other\'s blog post and create your own!',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/bloggy', 
+                live: 'https://bloggy-production.up.railway.app/'
             }
         },
         {
@@ -51,24 +69,6 @@ function Portfolio() {
             }
         },
         {
-            title: 'Meme Maker 9000', 
-            subtitle: 'Make memes from the 100 most popular memes on Imgflip',
-            links: 
-            {
-                github: 'https://github.com/DustyDogCodex/Meme-Maker-9000', 
-                live: 'https://dustydogcodex.github.io/Meme-Maker-9000/'
-            }
-        },
-        {
-            title: 'Hedgehog HedgeFund', 
-            subtitle: 'React+Bootstrap website for a fictional company',
-            links: 
-            {
-                github: 'https://github.com/DustyDogCodex/HedgeHog-HedgeFund', 
-                live: 'https://dustydogcodex.github.io/HedgeHog-HedgeFund/'
-            }
-        },
-        {
             title: 'Brise', 
             subtitle: 'Weather forecasts for your current location',
             links: 
@@ -94,7 +94,7 @@ function Portfolio() {
     return (
         <section
             id="projects" 
-            className="p-10 mt-12 md:p-20"
+            className="p-5 my-10 min-h-screen h-fit md:p-20"
         >
             {/* section heading */}
             <motion.div
@@ -122,7 +122,7 @@ function Portfolio() {
             </motion.div>
 
             {/* PROJECTS */}
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center min-h-full mt-10">
                 <motion.div
                     className="sm:grid sm:grid-cols-3"
                     initial="hidden"
@@ -131,7 +131,7 @@ function Portfolio() {
                     variants={container}
                 >
                     <div 
-                        className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-roboto font-bold"
+                        className="flex justify-center text-center items-center p-10 bg-red max-w-96 max-h-80 text-2xl font-roboto font-bold"
                     >
                         MODERN STYLISH INTERFACES
                     </div>
@@ -139,7 +139,7 @@ function Portfolio() {
                     {projectElements}
 
                     <div 
-                        className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-roboto font-bold"
+                        className="flex justify-center text-center items-center p-10 bg-blue max-w-96 max-h-80 text-2xl font-roboto font-bold"
                     >
                         SMOOTH USER EXPERIENCES
                     </div>
