@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 //creating a custom hook for watching and updating media queries as different components will respond to different media breakpoints.
 const useMediaQuery = (query) => {

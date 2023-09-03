@@ -72,11 +72,26 @@ function Skills() {
                     {/* Icons languages and frameworks */}
                     <div className="flex items-center mt-4 flex-col">
                         <span className="flex items-center text-2xl my-5 mx-3">
+                            <img
+                                src='./images/Typescript.svg'
+                                alt="tailwingcss logo" 
+                                className="h-10 w-10 mr-3"
+                            /> 
+                            Typescript 
+                        </span>
+                        <span className="flex items-center text-2xl my-5 mx-3">
                             <FontAwesomeIcon 
                                 icon={faReact} 
                                 style={{color: "skyblue", height:'40px',width:"40px", marginRight:'12px'}}
                             /> 
                             ReactJS 
+                        </span>
+                        <span className="flex items-center text-2xl my-5 mx-3">
+                            <FontAwesomeIcon 
+                                icon={faJs} 
+                                style={{color: "gold", height:'40px',width:"40px", marginRight:'12px'}}
+                            /> 
+                            JavaScript
                         </span>
                         <span className="flex items-center text-2xl my-5 mx-3">
                             <img
@@ -107,13 +122,6 @@ function Skills() {
                                 className="h-10 w-10"
                             /> 
                             MongoDB
-                        </span>
-                        <span className="flex items-center text-2xl my-5 mx-3">
-                            <FontAwesomeIcon 
-                                icon={faJs} 
-                                style={{color: "gold", height:'40px',width:"40px", marginRight:'12px'}}
-                            /> 
-                            JavaScript
                         </span>
                         <span className="flex items-center text-2xl my-5 mx-3">
                             <FontAwesomeIcon 

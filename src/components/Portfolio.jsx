@@ -51,6 +51,15 @@ function Portfolio() {
             }
         },
         {
+            title: 'Hangman', 
+            subtitle: 'Hangman game built using Typescript, Tailwind and React',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/hangman', 
+                live: 'https://main--famous-kringle-785f56.netlify.app/'
+            }
+        },
+        {
             title: 'Do You Memba', 
             subtitle: 'A King of the Hill themed memory card game built using React',
             links: 
@@ -66,15 +75,6 @@ function Portfolio() {
             {
                 github: 'https://github.com/DustyDogCodex/Tenzies', 
                 live: 'https://dustydogcodex.github.io/Tenzies/'
-            }
-        },
-        {
-            title: 'Brise', 
-            subtitle: 'Weather forecasts for your current location',
-            links: 
-            {
-                github: 'https://github.com/DustyDogCodex/Brise-Weather-App', 
-                live: 'https://dustydogcodex.github.io/Brise-Weather-App/'
             }
         }
     ]
