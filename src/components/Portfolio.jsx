@@ -80,21 +80,19 @@ function Portfolio() {
     ]
 
     //creating an array of projects for display
-    const projectElements = projectList.map((proj,index) => {
-        return (
-            <Project 
-                key={index} 
-                title={proj.title} 
-                subtitle={proj.subtitle}  
-                links={proj.links}
-            />
-        )
-    })
+    const projectElements = projectList.map((proj,index) => 
+        <Project 
+            key={index} 
+            title={proj.title} 
+            subtitle={proj.subtitle}  
+            links={proj.links}
+        />
+    )
 
     return (
         <section
             id="projects" 
-            className="p-5 my-10 min-h-screen h-fit md:p-20"
+            className="py-48"
         >
             {/* section heading */}
             <motion.div
@@ -102,7 +100,7 @@ function Portfolio() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                     hidden: { opacity: 0, y: -50 },
                     visible: { opacity: 1, y: 0}
@@ -122,13 +120,13 @@ function Portfolio() {
             </motion.div>
 
             {/* PROJECTS */}
-            <div className="flex justify-center min-h-full mt-10">
+            <div className="flex justify-center">
                 <motion.div
                     className="sm:grid sm:grid-cols-3"
+                    variants={container}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    variants={container}
+                    viewport={{ once: true, amount: 0.2 }}
                 >
                     <div 
                         className="flex justify-center text-center items-center p-10 bg-red max-w-96 max-h-80 text-2xl font-roboto font-bold"

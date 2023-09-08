@@ -102,7 +102,7 @@ function Navbar({ currentPage, setCurrentPage }) {
                         <div className="flex justify-end p-10">
                             <button 
                                 onClick={() => setMenuToggled(!menuToggled)}
-                                className="bg-deep-blue p-2 rounded-full flex items-center hover:bg-red transition duration-500"
+                                className="bg-red p-2 rounded-full flex items-center transition duration-500"
                             >
                                 <FontAwesomeIcon 
                                     icon={faX} 
