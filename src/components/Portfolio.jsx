@@ -113,7 +113,7 @@ function Portfolio() {
                         My Projects
                     </p>
 
-                    <div className="mt-5">
+                    <div className="mt-3 mb-6">
                         <RainbowLineBreak/>
                     </div>
                 </div>
