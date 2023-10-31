@@ -15,21 +15,21 @@ function Portfolio() {
     //an array containing a list of featured projects to be displayed.
     const projectList = [
         {
+            title: 'White Lotus', 
+            subtitle: 'Website designed for a luxurious island resort',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/white-lotus', 
+                live: 'https://dustydogcodex.github.io/white-lotus/'
+            }
+        },
+        {
             title: 'Dost', 
             subtitle: 'Responsive full stack social media app',
             links: 
             {
                 github: 'https://github.com/DustyDogCodex/Dost', 
                 live: 'https://dost-production.up.railway.app/'
-            }
-        },
-        {
-            title: 'Gasbnb', 
-            subtitle: 'Responsive full stack Airbnb clone',
-            links: 
-            {
-                github: 'https://github.com/DustyDogCodex/Gasbnb', 
-                live: 'https://gasbnb-production.up.railway.app/'
             }
         },
         {
@@ -51,6 +51,15 @@ function Portfolio() {
             }
         },
         {
+            title: 'Gasbnb', 
+            subtitle: 'Responsive full stack Airbnb clone',
+            links: 
+            {
+                github: 'https://github.com/DustyDogCodex/Gasbnb', 
+                live: 'https://gasbnb-production.up.railway.app/'
+            }
+        },
+        {
             title: 'Hangman', 
             subtitle: 'Hangman game built using Typescript, Tailwind and React',
             links: 
@@ -66,15 +75,6 @@ function Portfolio() {
             {
                 github: 'https://github.com/DustyDogCodex/do-you-memba', 
                 live: 'https://dustydogcodex.github.io/do-you-memba/'
-            }
-        },
-        {
-            title: 'Tenzies', 
-            subtitle: 'Roll the same 10 digits with 10 different dice to win!',
-            links: 
-            {
-                github: 'https://github.com/DustyDogCodex/Tenzies', 
-                live: 'https://dustydogcodex.github.io/Tenzies/'
             }
         }
     ]
@@ -92,7 +92,7 @@ function Portfolio() {
     return (
         <section
             id="projects" 
-            className="py-48"
+            className="py-24"
         >
             {/* section heading */}
             <motion.div
